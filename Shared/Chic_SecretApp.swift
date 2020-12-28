@@ -13,7 +13,7 @@ struct Chic_SecretApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VaultsScreen()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

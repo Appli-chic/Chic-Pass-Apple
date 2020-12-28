@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Chic Secret
+
+  Created by Applichic on 12/28/20.
+  
+*/
+"vaults" = "Vaults";
+"new_vault" = "New Vault";
+"explanation_master_password" = "This password is very important, it will be used to encrypt all the passwords you will store in this vault. Please be sure to keep in mind this password. If you lose it, it will be impossible for us to retrieve your passwords in this vault.";
+"name" = "Name";
+"password" = "Password";
+"verify_password" = "Verify password";
+"cancel" = "Cancel";
+"delete" = "Delete";
+"warning" = "Warning";
+"are_you_sure_delete_vault" = "Are you sure to delete this vault ?";
+"add" = "Add";

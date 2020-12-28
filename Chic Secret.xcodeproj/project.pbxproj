@@ -13,12 +13,24 @@
 		5FB3E74D259A7BC600C98CFE /* Chic_Secret.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E720259A7BC500C98CFE /* Chic_Secret.xcdatamodeld */; };
 		5FB3E74E259A7BC600C98CFE /* Chic_SecretApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E722259A7BC500C98CFE /* Chic_SecretApp.swift */; };
 		5FB3E74F259A7BC600C98CFE /* Chic_SecretApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E722259A7BC500C98CFE /* Chic_SecretApp.swift */; };
-		5FB3E750259A7BC600C98CFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E723259A7BC500C98CFE /* ContentView.swift */; };
-		5FB3E751259A7BC600C98CFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E723259A7BC500C98CFE /* ContentView.swift */; };
 		5FB3E752259A7BC600C98CFE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E724259A7BC500C98CFE /* Persistence.swift */; };
 		5FB3E753259A7BC600C98CFE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E724259A7BC500C98CFE /* Persistence.swift */; };
 		5FB3E754259A7BC600C98CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FB3E725259A7BC600C98CFE /* Assets.xcassets */; };
 		5FB3E755259A7BC600C98CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FB3E725259A7BC600C98CFE /* Assets.xcassets */; };
+		5FB3E773259A7C1400C98CFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FB3E776259A7C1400C98CFE /* Localizable.strings */; };
+		5FB3E774259A7C1400C98CFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FB3E776259A7C1400C98CFE /* Localizable.strings */; };
+		5FB3E791259A7EC000C98CFE /* NewVaultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E790259A7EC000C98CFE /* NewVaultScreen.swift */; };
+		5FB3E792259A7EC000C98CFE /* NewVaultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E790259A7EC000C98CFE /* NewVaultScreen.swift */; };
+		836D3181D40CD048F0127305 /* VaultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */; };
+		836D320397ECC4729395212F /* TextFieldTyped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */; };
+		836D32F11AB4A90B444A063B /* KeyboardManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3400119DCEC33B19D605 /* KeyboardManagement.swift */; };
+		836D332F2A9020FE2787906C /* KeyboardManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3400119DCEC33B19D605 /* KeyboardManagement.swift */; };
+		836D39D04B6790AC5C08B327 /* VaultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */; };
+		836D3C99E7A3D4397D6C7AF6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D39367FC1EF4D6D933F0D /* LoadingView.swift */; };
+		836D3D0394E15EF852B3320E /* TextFieldTyped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */; };
+		836D3DF173104B62355F9666 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3177D817078DD765ADFF /* PasswordField.swift */; };
+		836D3E50299AA926615C4176 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D39367FC1EF4D6D933F0D /* LoadingView.swift */; };
+		836D3FF5ED6ECE5798D53EF0 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3177D817078DD765ADFF /* PasswordField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +53,6 @@
 /* Begin PBXFileReference section */
 		5FB3E721259A7BC500C98CFE /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		5FB3E722259A7BC500C98CFE /* Chic_SecretApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chic_SecretApp.swift; sourceTree = "<group>"; };
-		5FB3E723259A7BC500C98CFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5FB3E724259A7BC500C98CFE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5FB3E725259A7BC600C98CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FB3E72A259A7BC600C98CFE /* Chic Secret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chic Secret.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +66,14 @@
 		5FB3E745259A7BC600C98CFE /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FB3E749259A7BC600C98CFE /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		5FB3E74B259A7BC600C98CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FB3E775259A7C1400C98CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5FB3E77B259A7C1700C98CFE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5FB3E790259A7EC000C98CFE /* NewVaultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVaultScreen.swift; sourceTree = "<group>"; };
+		836D3177D817078DD765ADFF /* PasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		836D3400119DCEC33B19D605 /* KeyboardManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManagement.swift; sourceTree = "<group>"; };
+		836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaultsScreen.swift; sourceTree = "<group>"; };
+		836D39367FC1EF4D6D933F0D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTyped.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +124,13 @@
 			isa = PBXGroup;
 			children = (
 				5FB3E722259A7BC500C98CFE /* Chic_SecretApp.swift */,
-				5FB3E723259A7BC500C98CFE /* ContentView.swift */,
 				5FB3E724259A7BC500C98CFE /* Persistence.swift */,
 				5FB3E725259A7BC600C98CFE /* Assets.xcassets */,
 				5FB3E720259A7BC500C98CFE /* Chic_Secret.xcdatamodeld */,
+				5FB3E776259A7C1400C98CFE /* Localizable.strings */,
+				836D35E9ABF878D37007DEB6 /* Screens */,
+				836D328C97688AD440E66989 /* Components */,
+				836D3B0A1AE262D2003A17BC /* Utils */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -157,6 +179,41 @@
 				5FB3E74B259A7BC600C98CFE /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		836D328C97688AD440E66989 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */,
+				836D3177D817078DD765ADFF /* PasswordField.swift */,
+				836D39367FC1EF4D6D933F0D /* LoadingView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		836D33708D6C96D035B17A59 /* Vault */ = {
+			isa = PBXGroup;
+			children = (
+				836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */,
+				5FB3E790259A7EC000C98CFE /* NewVaultScreen.swift */,
+			);
+			path = Vault;
+			sourceTree = "<group>";
+		};
+		836D35E9ABF878D37007DEB6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				836D33708D6C96D035B17A59 /* Vault */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		836D3B0A1AE262D2003A17BC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				836D3400119DCEC33B19D605 /* KeyboardManagement.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +321,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 5FB3E71A259A7BC500C98CFE;
 			productRefGroup = 5FB3E72B259A7BC600C98CFE /* Products */;
@@ -284,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FB3E754259A7BC600C98CFE /* Assets.xcassets in Resources */,
+				5FB3E773259A7C1400C98CFE /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FB3E755259A7BC600C98CFE /* Assets.xcassets in Resources */,
+				5FB3E774259A7C1400C98CFE /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +379,12 @@
 				5FB3E74E259A7BC600C98CFE /* Chic_SecretApp.swift in Sources */,
 				5FB3E752259A7BC600C98CFE /* Persistence.swift in Sources */,
 				5FB3E74C259A7BC600C98CFE /* Chic_Secret.xcdatamodeld in Sources */,
-				5FB3E750259A7BC600C98CFE /* ContentView.swift in Sources */,
+				5FB3E791259A7EC000C98CFE /* NewVaultScreen.swift in Sources */,
+				836D3181D40CD048F0127305 /* VaultsScreen.swift in Sources */,
+				836D320397ECC4729395212F /* TextFieldTyped.swift in Sources */,
+				836D3DF173104B62355F9666 /* PasswordField.swift in Sources */,
+				836D332F2A9020FE2787906C /* KeyboardManagement.swift in Sources */,
+				836D3C99E7A3D4397D6C7AF6 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +395,12 @@
 				5FB3E74F259A7BC600C98CFE /* Chic_SecretApp.swift in Sources */,
 				5FB3E753259A7BC600C98CFE /* Persistence.swift in Sources */,
 				5FB3E74D259A7BC600C98CFE /* Chic_Secret.xcdatamodeld in Sources */,
-				5FB3E751259A7BC600C98CFE /* ContentView.swift in Sources */,
+				5FB3E792259A7EC000C98CFE /* NewVaultScreen.swift in Sources */,
+				836D39D04B6790AC5C08B327 /* VaultsScreen.swift in Sources */,
+				836D3D0394E15EF852B3320E /* TextFieldTyped.swift in Sources */,
+				836D3FF5ED6ECE5798D53EF0 /* PasswordField.swift in Sources */,
+				836D32F11AB4A90B444A063B /* KeyboardManagement.swift in Sources */,
+				836D3E50299AA926615C4176 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,11 +435,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		5FB3E776259A7C1400C98CFE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FB3E775259A7C1400C98CFE /* en */,
+				5FB3E77B259A7C1700C98CFE /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		5FB3E756259A7BC600C98CFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -429,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -528,6 +612,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = C77NUJVPT9;
@@ -552,6 +637,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = C77NUJVPT9;

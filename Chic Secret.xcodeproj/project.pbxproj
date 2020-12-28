@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FB3E73F259A7BC600C98CFE /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E73E259A7BC600C98CFE /* Tests_iOS.swift */; };
+		5FB3E74A259A7BC600C98CFE /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E749259A7BC600C98CFE /* Tests_macOS.swift */; };
+		5FB3E74C259A7BC600C98CFE /* Chic_Secret.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E720259A7BC500C98CFE /* Chic_Secret.xcdatamodeld */; };
+		5FB3E74D259A7BC600C98CFE /* Chic_Secret.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E720259A7BC500C98CFE /* Chic_Secret.xcdatamodeld */; };
+		5FB3E74E259A7BC600C98CFE /* Chic_SecretApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E722259A7BC500C98CFE /* Chic_SecretApp.swift */; };
+		5FB3E74F259A7BC600C98CFE /* Chic_SecretApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E722259A7BC500C98CFE /* Chic_SecretApp.swift */; };
+		5FB3E750259A7BC600C98CFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E723259A7BC500C98CFE /* ContentView.swift */; };
+		5FB3E751259A7BC600C98CFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E723259A7BC500C98CFE /* ContentView.swift */; };
+		5FB3E752259A7BC600C98CFE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E724259A7BC500C98CFE /* Persistence.swift */; };
+		5FB3E753259A7BC600C98CFE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E724259A7BC500C98CFE /* Persistence.swift */; };
+		5FB3E754259A7BC600C98CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FB3E725259A7BC600C98CFE /* Assets.xcassets */; };
+		5FB3E755259A7BC600C98CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FB3E725259A7BC600C98CFE /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5FB3E73B259A7BC600C98CFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FB3E71B259A7BC500C98CFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FB3E729259A7BC600C98CFE;
+			remoteInfo = "Chic Secret (iOS)";
+		};
+		5FB3E746259A7BC600C98CFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FB3E71B259A7BC500C98CFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FB3E731259A7BC600C98CFE;
+			remoteInfo = "Chic Secret (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5FB3E721259A7BC500C98CFE /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		5FB3E722259A7BC500C98CFE /* Chic_SecretApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chic_SecretApp.swift; sourceTree = "<group>"; };
+		5FB3E723259A7BC500C98CFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5FB3E724259A7BC500C98CFE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		5FB3E725259A7BC600C98CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FB3E72A259A7BC600C98CFE /* Chic Secret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chic Secret.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FB3E72D259A7BC600C98CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FB3E732259A7BC600C98CFE /* Chic Secret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chic Secret.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FB3E734259A7BC600C98CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FB3E735259A7BC600C98CFE /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		5FB3E73A259A7BC600C98CFE /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FB3E73E259A7BC600C98CFE /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		5FB3E740259A7BC600C98CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FB3E745259A7BC600C98CFE /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FB3E749259A7BC600C98CFE /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		5FB3E74B259A7BC600C98CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FB3E727259A7BC600C98CFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB3E72F259A7BC600C98CFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB3E737259A7BC600C98CFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB3E742259A7BC600C98CFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FB3E71A259A7BC500C98CFE = {
+			isa = PBXGroup;
+			children = (
+				5FB3E71F259A7BC500C98CFE /* Shared */,
+				5FB3E72C259A7BC600C98CFE /* iOS */,
+				5FB3E733259A7BC600C98CFE /* macOS */,
+				5FB3E73D259A7BC600C98CFE /* Tests iOS */,
+				5FB3E748259A7BC600C98CFE /* Tests macOS */,
+				5FB3E72B259A7BC600C98CFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5FB3E71F259A7BC500C98CFE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5FB3E722259A7BC500C98CFE /* Chic_SecretApp.swift */,
+				5FB3E723259A7BC500C98CFE /* ContentView.swift */,
+				5FB3E724259A7BC500C98CFE /* Persistence.swift */,
+				5FB3E725259A7BC600C98CFE /* Assets.xcassets */,
+				5FB3E720259A7BC500C98CFE /* Chic_Secret.xcdatamodeld */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5FB3E72B259A7BC600C98CFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FB3E72A259A7BC600C98CFE /* Chic Secret.app */,
+				5FB3E732259A7BC600C98CFE /* Chic Secret.app */,
+				5FB3E73A259A7BC600C98CFE /* Tests iOS.xctest */,
+				5FB3E745259A7BC600C98CFE /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FB3E72C259A7BC600C98CFE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5FB3E72D259A7BC600C98CFE /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		5FB3E733259A7BC600C98CFE /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				5FB3E734259A7BC600C98CFE /* Info.plist */,
+				5FB3E735259A7BC600C98CFE /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		5FB3E73D259A7BC600C98CFE /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5FB3E73E259A7BC600C98CFE /* Tests_iOS.swift */,
+				5FB3E740259A7BC600C98CFE /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		5FB3E748259A7BC600C98CFE /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				5FB3E749259A7BC600C98CFE /* Tests_macOS.swift */,
+				5FB3E74B259A7BC600C98CFE /* Info.plist */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FB3E729259A7BC600C98CFE /* Chic Secret (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FB3E758259A7BC600C98CFE /* Build configuration list for PBXNativeTarget "Chic Secret (iOS)" */;
+			buildPhases = (
+				5FB3E726259A7BC600C98CFE /* Sources */,
+				5FB3E727259A7BC600C98CFE /* Frameworks */,
+				5FB3E728259A7BC600C98CFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chic Secret (iOS)";
+			productName = "Chic Secret (iOS)";
+			productReference = 5FB3E72A259A7BC600C98CFE /* Chic Secret.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FB3E731259A7BC600C98CFE /* Chic Secret (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FB3E75B259A7BC600C98CFE /* Build configuration list for PBXNativeTarget "Chic Secret (macOS)" */;
+			buildPhases = (
+				5FB3E72E259A7BC600C98CFE /* Sources */,
+				5FB3E72F259A7BC600C98CFE /* Frameworks */,
+				5FB3E730259A7BC600C98CFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chic Secret (macOS)";
+			productName = "Chic Secret (macOS)";
+			productReference = 5FB3E732259A7BC600C98CFE /* Chic Secret.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FB3E739259A7BC600C98CFE /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FB3E75E259A7BC600C98CFE /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				5FB3E736259A7BC600C98CFE /* Sources */,
+				5FB3E737259A7BC600C98CFE /* Frameworks */,
+				5FB3E738259A7BC600C98CFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FB3E73C259A7BC600C98CFE /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 5FB3E73A259A7BC600C98CFE /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		5FB3E744259A7BC600C98CFE /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FB3E761259A7BC600C98CFE /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				5FB3E741259A7BC600C98CFE /* Sources */,
+				5FB3E742259A7BC600C98CFE /* Frameworks */,
+				5FB3E743259A7BC600C98CFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FB3E747259A7BC600C98CFE /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 5FB3E745259A7BC600C98CFE /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FB3E71B259A7BC500C98CFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					5FB3E729259A7BC600C98CFE = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					5FB3E731259A7BC600C98CFE = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					5FB3E739259A7BC600C98CFE = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 5FB3E729259A7BC600C98CFE;
+					};
+					5FB3E744259A7BC600C98CFE = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 5FB3E731259A7BC600C98CFE;
+					};
+				};
+			};
+			buildConfigurationList = 5FB3E71E259A7BC500C98CFE /* Build configuration list for PBXProject "Chic Secret" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FB3E71A259A7BC500C98CFE;
+			productRefGroup = 5FB3E72B259A7BC600C98CFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FB3E729259A7BC600C98CFE /* Chic Secret (iOS) */,
+				5FB3E731259A7BC600C98CFE /* Chic Secret (macOS) */,
+				5FB3E739259A7BC600C98CFE /* Tests iOS */,
+				5FB3E744259A7BC600C98CFE /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FB3E728259A7BC600C98CFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB3E754259A7BC600C98CFE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB3E730259A7BC600C98CFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB3E755259A7BC600C98CFE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB3E738259A7BC600C98CFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB3E743259A7BC600C98CFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FB3E726259A7BC600C98CFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB3E74E259A7BC600C98CFE /* Chic_SecretApp.swift in Sources */,
+				5FB3E752259A7BC600C98CFE /* Persistence.swift in Sources */,
+				5FB3E74C259A7BC600C98CFE /* Chic_Secret.xcdatamodeld in Sources */,
+				5FB3E750259A7BC600C98CFE /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB3E72E259A7BC600C98CFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB3E74F259A7BC600C98CFE /* Chic_SecretApp.swift in Sources */,
+				5FB3E753259A7BC600C98CFE /* Persistence.swift in Sources */,
+				5FB3E74D259A7BC600C98CFE /* Chic_Secret.xcdatamodeld in Sources */,
+				5FB3E751259A7BC600C98CFE /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB3E736259A7BC600C98CFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB3E73F259A7BC600C98CFE /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB3E741259A7BC600C98CFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB3E74A259A7BC600C98CFE /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FB3E73C259A7BC600C98CFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FB3E729259A7BC600C98CFE /* Chic Secret (iOS) */;
+			targetProxy = 5FB3E73B259A7BC600C98CFE /* PBXContainerItemProxy */;
+		};
+		5FB3E747259A7BC600C98CFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FB3E731259A7BC600C98CFE /* Chic Secret (macOS) */;
+			targetProxy = 5FB3E746259A7BC600C98CFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5FB3E756259A7BC600C98CFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5FB3E757259A7BC600C98CFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		5FB3E759259A7BC600C98CFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C77NUJVPT9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.applichic.Chic-Secret";
+				PRODUCT_NAME = "Chic Secret";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FB3E75A259A7BC600C98CFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C77NUJVPT9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.applichic.Chic-Secret";
+				PRODUCT_NAME = "Chic Secret";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FB3E75C259A7BC600C98CFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C77NUJVPT9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.applichic.Chic-Secret";
+				PRODUCT_NAME = "Chic Secret";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5FB3E75D259A7BC600C98CFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C77NUJVPT9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.applichic.Chic-Secret";
+				PRODUCT_NAME = "Chic Secret";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		5FB3E75F259A7BC600C98CFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C77NUJVPT9;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.applichic.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Chic Secret (iOS)";
+			};
+			name = Debug;
+		};
+		5FB3E760259A7BC600C98CFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C77NUJVPT9;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.applichic.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Chic Secret (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FB3E762259A7BC600C98CFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C77NUJVPT9;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.applichic.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Chic Secret (macOS)";
+			};
+			name = Debug;
+		};
+		5FB3E763259A7BC600C98CFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C77NUJVPT9;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.applichic.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Chic Secret (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FB3E71E259A7BC500C98CFE /* Build configuration list for PBXProject "Chic Secret" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FB3E756259A7BC600C98CFE /* Debug */,
+				5FB3E757259A7BC600C98CFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FB3E758259A7BC600C98CFE /* Build configuration list for PBXNativeTarget "Chic Secret (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FB3E759259A7BC600C98CFE /* Debug */,
+				5FB3E75A259A7BC600C98CFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FB3E75B259A7BC600C98CFE /* Build configuration list for PBXNativeTarget "Chic Secret (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FB3E75C259A7BC600C98CFE /* Debug */,
+				5FB3E75D259A7BC600C98CFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FB3E75E259A7BC600C98CFE /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FB3E75F259A7BC600C98CFE /* Debug */,
+				5FB3E760259A7BC600C98CFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FB3E761259A7BC600C98CFE /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FB3E762259A7BC600C98CFE /* Debug */,
+				5FB3E763259A7BC600C98CFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5FB3E720259A7BC500C98CFE /* Chic_Secret.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5FB3E721259A7BC500C98CFE /* Shared.xcdatamodel */,
+			);
+			currentVersion = 5FB3E721259A7BC500C98CFE /* Shared.xcdatamodel */;
+			path = Chic_Secret.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5FB3E71B259A7BC500C98CFE /* Project object */;
+}

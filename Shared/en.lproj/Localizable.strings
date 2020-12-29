@@ -26,6 +26,7 @@
 "very_strong" = "Very strong";
 "passwords" = "Passwords";
 "categories" = "Categories";
+"category" = "Category";
 "profile" = "Profile";
 "settings" = "Settings";
 "unlock" = "Unlock";
@@ -36,3 +37,4 @@
 "new_category" = "New Category";
 "new_password" = "New Password";
 "username_email" = "Username/Email";
+"generate_password" = "Generate Password";

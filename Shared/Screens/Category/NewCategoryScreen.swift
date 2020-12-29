@@ -62,9 +62,6 @@ struct NewCategoryScreen: View {
                     Alert(title: Text("error"), message: Text(NSLocalizedString(errorMessage, comment: "Error message")),
                             dismissButton: .cancel(Text("ok")))
                 }
-                .onTapGesture {
-                    hideKeyboard()
-                }
     }
 
     private func addCategory() {

@@ -40,11 +40,13 @@
 		BDDB920F4A0E7E57792EC432 /* StringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C064B44677C0B8D1CCC /* StringProtocol.swift */; };
 		BDDB9251B5AA71B4200ABF5C /* IconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB937F2A72471879A9312E /* IconPicker.swift */; };
 		BDDB92651CEB3BBC4725ABB1 /* CategoriesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9F9475C6DDABB87191A5 /* CategoriesScreen.swift */; };
+		BDDB9282A753E7FEF73916D9 /* NewEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9E6D916DF926AF183ADB /* NewEntryScreen.swift */; };
 		BDDB92C6E2CDEBAE033E01FD /* NewCategoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C4331F814968C9864FD /* NewCategoryScreen.swift */; };
 		BDDB93108ABCE3D8194064B6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C081524B904735A10E3 /* MainScreen.swift */; };
 		BDDB9439565FBE7335A5182D /* CategoriesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9F9475C6DDABB87191A5 /* CategoriesScreen.swift */; };
 		BDDB94544732D9F312C092E9 /* NewCategoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C4331F814968C9864FD /* NewCategoryScreen.swift */; };
 		BDDB95149DE52E7A0C057510 /* PasswordUnlockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */; };
+		BDDB951FB938A57A8D84306B /* NewEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9E6D916DF926AF183ADB /* NewEntryScreen.swift */; };
 		BDDB956F2952657512F35127 /* IconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB937F2A72471879A9312E /* IconPicker.swift */; };
 		BDDB961C6ECE18757A0E552C /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9EFBC977B7158A1F52F6 /* CategoryItem.swift */; };
 		BDDB9672117B1ED57B68C12D /* PasswordUnlockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */; };
@@ -118,6 +120,7 @@
 		BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordUnlockScreen.swift; sourceTree = "<group>"; };
 		BDDB9D3FC36D1C4B9A6FFEC2 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		BDDB9E5350843890673F1A12 /* ColorPickerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerItem.swift; sourceTree = "<group>"; };
+		BDDB9E6D916DF926AF183ADB /* NewEntryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEntryScreen.swift; sourceTree = "<group>"; };
 		BDDB9EC8F1639E4FE2C32E7C /* MbModalHackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MbModalHackView.swift; sourceTree = "<group>"; };
 		BDDB9EFBC977B7158A1F52F6 /* CategoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		BDDB9F9475C6DDABB87191A5 /* CategoriesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesScreen.swift; sourceTree = "<group>"; };
@@ -301,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				BDDB973DC561156A38F0C807 /* EntriesScreen.swift */,
+				BDDB9E6D916DF926AF183ADB /* NewEntryScreen.swift */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -583,6 +587,7 @@
 				BDDB94544732D9F312C092E9 /* NewCategoryScreen.swift in Sources */,
 				BDDB9251B5AA71B4200ABF5C /* IconPicker.swift in Sources */,
 				BDDB9F2AFDCA2B0BA481D023 /* ColorPickerItem.swift in Sources */,
+				BDDB9282A753E7FEF73916D9 /* NewEntryScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +617,7 @@
 				BDDB92C6E2CDEBAE033E01FD /* NewCategoryScreen.swift in Sources */,
 				BDDB956F2952657512F35127 /* IconPicker.swift in Sources */,
 				BDDB977CE572BED3C8F19EC4 /* ColorPickerItem.swift in Sources */,
+				BDDB951FB938A57A8D84306B /* NewEntryScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -49,10 +49,10 @@ struct EntriesScreen: View {
                         }
                     }
         }
-//                .sheet(isPresented: $isAddingEntry) {
-//                    NavigationView {
-//                        NewEntryScreen()
-//                    }
-//                }
+                .sheet(isPresented: $isAddingEntry) {
+                    NavigationView {
+                        NewEntryScreen()
+                    }
+                }
     }
 }

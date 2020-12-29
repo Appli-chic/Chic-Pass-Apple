@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E9036EA5B449C1FBDA7D626 /* Pods_Chic_Secret__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A06E6B85AF97481F40AB6B /* Pods_Chic_Secret__iOS_.framework */; };
 		5FB3E73F259A7BC600C98CFE /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E73E259A7BC600C98CFE /* Tests_iOS.swift */; };
 		5FB3E74A259A7BC600C98CFE /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E749259A7BC600C98CFE /* Tests_macOS.swift */; };
 		5FB3E74C259A7BC600C98CFE /* Chic_Secret.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E720259A7BC500C98CFE /* Chic_Secret.xcdatamodeld */; };
@@ -31,8 +32,7 @@
 		836D3DF173104B62355F9666 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3177D817078DD765ADFF /* PasswordField.swift */; };
 		836D3E50299AA926615C4176 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D39367FC1EF4D6D933F0D /* LoadingView.swift */; };
 		836D3FF5ED6ECE5798D53EF0 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3177D817078DD765ADFF /* PasswordField.swift */; };
-		A7E903F0259B365B00048CFB /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E903E2259B35FF00048CFB /* CryptoSwift.framework */; };
-		A7E903FE259B38C700048CFB /* CryptoSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A7E903E2259B35FF00048CFB /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86C8ACB69C2B935233861B8C /* Pods_Chic_Secret__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1632EC08444AF15934BF127D /* Pods_Chic_Secret__macOS_.framework */; };
 		BDDB909154ACFFE5EB2C0CCE /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB909AF57ADDC244E9C018 /* Security.swift */; };
 		BDDB9B3082E1AFFA16C186A5 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB909AF57ADDC244E9C018 /* Security.swift */; };
 /* End PBXBuildFile section */
@@ -52,64 +52,13 @@
 			remoteGlobalIDString = 5FB3E731259A7BC600C98CFE;
 			remoteInfo = "Chic Secret (macOS)";
 		};
-		A7E903E1259B35FF00048CFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7E903D9259B35FF00048CFB /* CryptoSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 754BE45519693E190098E6F3;
-			remoteInfo = CryptoSwift;
-		};
-		A7E903E3259B35FF00048CFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7E903D9259B35FF00048CFB /* CryptoSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 75211F92207249D8004E41F8;
-			remoteInfo = "CryptoSwift-TestHostApp";
-		};
-		A7E903E5259B35FF00048CFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7E903D9259B35FF00048CFB /* CryptoSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 754BE46019693E190098E6F3;
-			remoteInfo = CryptoSwiftTests;
-		};
-		A7E903E7259B35FF00048CFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7E903D9259B35FF00048CFB /* CryptoSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7595C14A2072E48C00EA1A5F;
-			remoteInfo = "TestsPerformance-Mac";
-		};
-		A7E903E9259B35FF00048CFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7E903D9259B35FF00048CFB /* CryptoSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7564F0602072EAEB00CA5A96;
-			remoteInfo = "TestsPerformance-iOS";
-		};
-		A7E903F1259B366B00048CFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7E903D9259B35FF00048CFB /* CryptoSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 754BE45419693E190098E6F3;
-			remoteInfo = CryptoSwift;
-		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		A7E903FD259B38B700048CFB /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A7E903FE259B38C700048CFB /* CryptoSwift.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		1632EC08444AF15934BF127D /* Pods_Chic_Secret__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chic_Secret__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		284C4C44B4DE66FDFA8BC1B0 /* Pods-Chic Secret (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chic Secret (iOS).release.xcconfig"; path = "Target Support Files/Pods-Chic Secret (iOS)/Pods-Chic Secret (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		2BDF00A9ADE8A5AAFC5F47A1 /* Pods-Chic Secret (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chic Secret (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Chic Secret (iOS)/Pods-Chic Secret (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		54FC2E1E0672E5512E5EE8B2 /* Pods-Chic Secret (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chic Secret (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Chic Secret (macOS)/Pods-Chic Secret (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		5FB3E721259A7BC500C98CFE /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		5FB3E722259A7BC500C98CFE /* Chic_SecretApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chic_SecretApp.swift; sourceTree = "<group>"; };
 		5FB3E724259A7BC500C98CFE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -128,12 +77,13 @@
 		5FB3E775259A7C1400C98CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5FB3E77B259A7C1700C98CFE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5FB3E790259A7EC000C98CFE /* NewVaultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVaultScreen.swift; sourceTree = "<group>"; };
+		77A06E6B85AF97481F40AB6B /* Pods_Chic_Secret__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chic_Secret__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D3177D817078DD765ADFF /* PasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		836D3400119DCEC33B19D605 /* KeyboardManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManagement.swift; sourceTree = "<group>"; };
 		836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaultsScreen.swift; sourceTree = "<group>"; };
 		836D39367FC1EF4D6D933F0D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTyped.swift; sourceTree = "<group>"; };
-		A7E903D9259B35FF00048CFB /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = "../../../Downloads/CryptoSwift-1.3.8/CryptoSwift.xcodeproj"; sourceTree = "<group>"; };
+		AF58C5249279A0CCE26D8533 /* Pods-Chic Secret (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chic Secret (macOS).release.xcconfig"; path = "Target Support Files/Pods-Chic Secret (macOS)/Pods-Chic Secret (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		BDDB909AF57ADDC244E9C018 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7E903F0259B365B00048CFB /* CryptoSwift.framework in Frameworks */,
+				4E9036EA5B449C1FBDA7D626 /* Pods_Chic_Secret__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C8ACB69C2B935233861B8C /* Pods_Chic_Secret__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +124,6 @@
 		5FB3E71A259A7BC500C98CFE = {
 			isa = PBXGroup;
 			children = (
-				A7E903D9259B35FF00048CFB /* CryptoSwift.xcodeproj */,
 				5FB3E71F259A7BC500C98CFE /* Shared */,
 				5FB3E72C259A7BC600C98CFE /* iOS */,
 				5FB3E733259A7BC600C98CFE /* macOS */,
@@ -181,6 +131,7 @@
 				5FB3E748259A7BC600C98CFE /* Tests macOS */,
 				5FB3E72B259A7BC600C98CFE /* Products */,
 				A7E903EF259B365B00048CFB /* Frameworks */,
+				DBC54E32D9163C1B73E885A9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,23 +232,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		A7E903DA259B35FF00048CFB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A7E903E2259B35FF00048CFB /* CryptoSwift.framework */,
-				A7E903E4259B35FF00048CFB /* CryptoSwift-TestHostApp.app */,
-				A7E903E6259B35FF00048CFB /* CryptoSwiftTests.xctest */,
-				A7E903E8259B35FF00048CFB /* TestsPerformance-Mac.xctest */,
-				A7E903EA259B35FF00048CFB /* TestsPerformance-iOS.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		A7E903EF259B365B00048CFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				77A06E6B85AF97481F40AB6B /* Pods_Chic_Secret__iOS_.framework */,
+				1632EC08444AF15934BF127D /* Pods_Chic_Secret__macOS_.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBC54E32D9163C1B73E885A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BDF00A9ADE8A5AAFC5F47A1 /* Pods-Chic Secret (iOS).debug.xcconfig */,
+				284C4C44B4DE66FDFA8BC1B0 /* Pods-Chic Secret (iOS).release.xcconfig */,
+				54FC2E1E0672E5512E5EE8B2 /* Pods-Chic Secret (macOS).debug.xcconfig */,
+				AF58C5249279A0CCE26D8533 /* Pods-Chic Secret (macOS).release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,19 +260,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FB3E758259A7BC600C98CFE /* Build configuration list for PBXNativeTarget "Chic Secret (iOS)" */;
 			buildPhases = (
+				C77F5844EC180897D3DA87EE /* [CP] Check Pods Manifest.lock */,
 				5FB3E726259A7BC600C98CFE /* Sources */,
 				5FB3E727259A7BC600C98CFE /* Frameworks */,
 				5FB3E728259A7BC600C98CFE /* Resources */,
-				A7E903FD259B38B700048CFB /* CopyFiles */,
+				D7B8E92333630BE29EDEB7BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A7E903F2259B366B00048CFB /* PBXTargetDependency */,
 			);
 			name = "Chic Secret (iOS)";
-			packageProductDependencies = (
-			);
 			productName = "Chic Secret (iOS)";
 			productReference = 5FB3E72A259A7BC600C98CFE /* Chic Secret.app */;
 			productType = "com.apple.product-type.application";
@@ -328,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FB3E75B259A7BC600C98CFE /* Build configuration list for PBXNativeTarget "Chic Secret (macOS)" */;
 			buildPhases = (
+				A87F96DEBFD8F58110E06CB3 /* [CP] Check Pods Manifest.lock */,
 				5FB3E72E259A7BC600C98CFE /* Sources */,
 				5FB3E72F259A7BC600C98CFE /* Frameworks */,
 				5FB3E730259A7BC600C98CFE /* Resources */,
+				A17D3D7C490E7927F43F8D7D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -412,16 +365,8 @@
 				fr,
 			);
 			mainGroup = 5FB3E71A259A7BC500C98CFE;
-			packageReferences = (
-			);
 			productRefGroup = 5FB3E72B259A7BC600C98CFE /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A7E903DA259B35FF00048CFB /* Products */;
-					ProjectRef = A7E903D9259B35FF00048CFB /* CryptoSwift.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				5FB3E729259A7BC600C98CFE /* Chic Secret (iOS) */,
@@ -431,44 +376,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		A7E903E2259B35FF00048CFB /* CryptoSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CryptoSwift.framework;
-			remoteRef = A7E903E1259B35FF00048CFB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A7E903E4259B35FF00048CFB /* CryptoSwift-TestHostApp.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "CryptoSwift-TestHostApp.app";
-			remoteRef = A7E903E3259B35FF00048CFB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A7E903E6259B35FF00048CFB /* CryptoSwiftTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = CryptoSwiftTests.xctest;
-			remoteRef = A7E903E5259B35FF00048CFB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A7E903E8259B35FF00048CFB /* TestsPerformance-Mac.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "TestsPerformance-Mac.xctest";
-			remoteRef = A7E903E7259B35FF00048CFB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A7E903EA259B35FF00048CFB /* TestsPerformance-iOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "TestsPerformance-iOS.xctest";
-			remoteRef = A7E903E9259B35FF00048CFB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5FB3E728259A7BC600C98CFE /* Resources */ = {
@@ -504,6 +411,87 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A17D3D7C490E7927F43F8D7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chic Secret (macOS)/Pods-Chic Secret (macOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chic Secret (macOS)/Pods-Chic Secret (macOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chic Secret (macOS)/Pods-Chic Secret (macOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A87F96DEBFD8F58110E06CB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chic Secret (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C77F5844EC180897D3DA87EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chic Secret (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7B8E92333630BE29EDEB7BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chic Secret (iOS)/Pods-Chic Secret (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chic Secret (iOS)/Pods-Chic Secret (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chic Secret (iOS)/Pods-Chic Secret (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5FB3E726259A7BC600C98CFE /* Sources */ = {
@@ -568,11 +556,6 @@
 			isa = PBXTargetDependency;
 			target = 5FB3E731259A7BC600C98CFE /* Chic Secret (macOS) */;
 			targetProxy = 5FB3E746259A7BC600C98CFE /* PBXContainerItemProxy */;
-		};
-		A7E903F2259B366B00048CFB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CryptoSwift;
-			targetProxy = A7E903F1259B366B00048CFB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -704,6 +687,7 @@
 		};
 		5FB3E759259A7BC600C98CFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BDF00A9ADE8A5AAFC5F47A1 /* Pods-Chic Secret (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -726,6 +710,7 @@
 		};
 		5FB3E75A259A7BC600C98CFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 284C4C44B4DE66FDFA8BC1B0 /* Pods-Chic Secret (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -749,6 +734,7 @@
 		};
 		5FB3E75C259A7BC600C98CFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54FC2E1E0672E5512E5EE8B2 /* Pods-Chic Secret (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -774,6 +760,7 @@
 		};
 		5FB3E75D259A7BC600C98CFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF58C5249279A0CCE26D8533 /* Pods-Chic Secret (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

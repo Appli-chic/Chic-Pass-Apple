@@ -7,14 +7,22 @@
 
 import SwiftUI
 
+class VaultData: ObservableObject {
+    @Published var isMainScreenActive = false
+    @Published var vault: Vault? = nil
+    @Published var password: String = ""
+}
+
 @main
 struct Chic_SecretApp: App {
     let persistenceController = PersistenceController.shared
+    var vaultData = VaultData()
 
     var body: some Scene {
         WindowGroup {
             VaultsScreen()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(vaultData)
         }
     }
 }

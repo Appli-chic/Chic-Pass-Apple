@@ -26,6 +26,7 @@ struct VaultsScreen: View {
                         Text("Item at")
                     }
                 }
+                        .listStyle(InsetGroupedListStyle())
             }
                     .navigationBarTitle("vaults", displayMode: .large)
                     .toolbar {

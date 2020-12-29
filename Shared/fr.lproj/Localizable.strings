@@ -17,3 +17,11 @@
 "warning" = "Attention";
 "are_you_sure_delete_vault" = "Êtes-vous sûr de vouloir supprimer ce coffre?";
 "add" = "Ajouter";
+"error" = "Erreur";
+"name_empty" = "Le nom ne doit pas être vide";
+"password_too_small" = "Le mot de passe doit faire au moins 6 caractères";
+"passwords_different" = "Les deux mots de passe doivent être identiques";
+"weak" = "Faible";
+"medium" = "Moyen";
+"strong" = "Fort";
+"very_strong" = "Très fort";

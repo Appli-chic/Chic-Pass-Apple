@@ -16,3 +16,11 @@
 "warning" = "Warning";
 "are_you_sure_delete_vault" = "Are you sure to delete this vault ?";
 "add" = "Add";
+"error" = "Error";
+"name_empty" = "The name must not be empty";
+"password_too_small" = "The password must be at least 6 characters long";
+"passwords_different" = "The two passwords must be the same";
+"weak" = "Weak";
+"medium" = "Medium";
+"strong" = "Strong";
+"very_strong" = "Very strong";

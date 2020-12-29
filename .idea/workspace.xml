@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.xcworkspace/xcuserdata/lazyos.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/Chic Secret (iOS).xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Utils/Security.swift" afterDir="false" />
+    <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="Adding vault and security.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Chic_SecretApp.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Chic_SecretApp.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/NewVaultScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/NewVaultScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/VaultsScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/VaultsScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +51,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
-  <component name="RunManager" selected="Application.Chic Secret (iOS)">
+  <component name="RunManager">
     <configuration name="Chic Secret (iOS)" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Chic Secret" TARGET_NAME="Chic Secret (iOS)" CONFIG_NAME="Debug" SCHEME_NAME="Chic Secret (iOS)" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="Chic Secret" RUN_TARGET_NAME="Chic Secret (iOS)" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -65,14 +63,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Chic Secret (iOS)" />
-      <item itemvalue="Application.CryptoSwift-TestHostApp" />
-      <item itemvalue="Application.CryptoSwift" />
-      <item itemvalue="XCTest.Tests" />
-      <item itemvalue="XCTest.TestsPerformance-iOS" />
-      <item itemvalue="XCTest.TestsPerformance-Mac" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,8 +75,17 @@
       <workItem from="1609188442570" duration="4073000" />
       <workItem from="1609192980996" duration="1622000" />
       <workItem from="1609229800215" duration="2536000" />
-      <workItem from="1609236496283" duration="570000" />
+      <workItem from="1609236496283" duration="2475000" />
+      <workItem from="1609239422633" duration="17000" />
     </task>
+    <task id="LOCAL-00001" summary="Adding vault and security.">
+      <created>1609237179479</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609237179479</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,5 +105,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Adding vault and security." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding vault and security." />
   </component>
 </project>

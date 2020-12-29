@@ -11,6 +11,7 @@ import os
 struct NewVaultScreen: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @EnvironmentObject var vaultData: VaultData
 
     @State private var isLoading = false
     @State private var name = ""
@@ -50,6 +51,10 @@ struct NewVaultScreen: View {
                             Text("add")
                         }
                     }
+                }
+                .alert(isPresented: $isErrorAlertShown) {
+                    Alert(title: Text("error"), message: Text(NSLocalizedString(errorMessage, comment: "Error message")),
+                            dismissButton: .cancel(Text("ok")))
                 }
                 .onTapGesture {
                     hideKeyboard()
@@ -95,8 +100,9 @@ struct NewVaultScreen: View {
                         try viewContext.save()
 
                         DispatchQueue.main.async {
-//                            vaultData.isMainScreenActive.toggle()
-//                            vaultData.vault = newVault
+                            vaultData.isMainScreenActive.toggle()
+                            vaultData.vault = newVault
+                            vaultData.password = password
                             mode.wrappedValue.dismiss()
                         }
                     } catch {

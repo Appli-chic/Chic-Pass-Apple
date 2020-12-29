@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/xcode.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.xcworkspace/xcuserdata/applichic.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/xcuserdata/applichic.xcuserdatad/xcschemes/Chic Secret (iOS).xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Components/LoadingView.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Components/PasswordField.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Components/TextFieldTyped.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Screens/Vault/NewVaultScreen.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Utils/KeyboardManagement.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.xcworkspace/xcuserdata/lazyos.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/Chic Secret (iOS).xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shared/Utils/Security.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/xcuserdata/applichic.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/xcuserdata/applichic.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Chic_Secret.xcdatamodeld/Shared.xcdatamodel/contents" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Chic_Secret.xcdatamodeld/Shared.xcdatamodel/contents" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Chic_SecretApp.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Chic_SecretApp.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/ContentView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/VaultsScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Persistence.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Persistence.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/NewVaultScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/NewVaultScreen.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +23,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_00008101-001C51412ED8001E" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -39,9 +41,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Chic Secret (iOS),,,Chic Secret (macOS)" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -51,7 +55,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Chic Secret (iOS)">
     <configuration name="Chic Secret (iOS)" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Chic Secret" TARGET_NAME="Chic Secret (iOS)" CONFIG_NAME="Debug" SCHEME_NAME="Chic Secret (iOS)" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="Chic Secret" RUN_TARGET_NAME="Chic Secret (iOS)" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -61,6 +65,14 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Chic Secret (iOS)" />
+      <item itemvalue="Application.CryptoSwift-TestHostApp" />
+      <item itemvalue="Application.CryptoSwift" />
+      <item itemvalue="XCTest.Tests" />
+      <item itemvalue="XCTest.TestsPerformance-iOS" />
+      <item itemvalue="XCTest.TestsPerformance-Mac" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,6 +84,8 @@
       <updated>1609188441480</updated>
       <workItem from="1609188442570" duration="4073000" />
       <workItem from="1609192980996" duration="1622000" />
+      <workItem from="1609229800215" duration="2536000" />
+      <workItem from="1609236496283" duration="570000" />
     </task>
     <servers />
   </component>

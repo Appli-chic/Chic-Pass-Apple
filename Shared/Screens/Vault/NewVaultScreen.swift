@@ -43,13 +43,13 @@ struct NewVaultScreen: View {
                     ToolbarItem(placement: .cancellationAction) {
                         Button(action: { mode.wrappedValue.dismiss() }) {
                             Text("cancel")
-                        }
+                        }.disabled(isLoading)
                     }
 
                     ToolbarItem(placement: .confirmationAction) {
                         Button(action: addVault) {
                             Text("add")
-                        }
+                        }.disabled(isLoading)
                     }
                 }
                 .alert(isPresented: $isErrorAlertShown) {
@@ -58,6 +58,9 @@ struct NewVaultScreen: View {
                 }
                 .onTapGesture {
                     hideKeyboard()
+                }
+                .allowAutoDismiss {
+                    !isLoading
                 }
     }
 

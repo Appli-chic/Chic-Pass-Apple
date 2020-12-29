@@ -7,9 +7,11 @@
 
 import SwiftUI
 import CoreData
+import os
 
 struct VaultsScreen: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @EnvironmentObject var vaultData: VaultData
 
     @FetchRequest(
             sortDescriptors: [NSSortDescriptor(keyPath: \Vault.createdAt, ascending: true)],
@@ -17,14 +19,33 @@ struct VaultsScreen: View {
     private var vaults: FetchedResults<Vault>
 
     @State private var showingNewVaultScreen = false
+    @State private var isShowingPasswordInput = false
+    @State private var isDeleteAlertOpen = false
+    @State private var offsets: IndexSet? = nil
 
     var body: some View {
         NavigationView {
             VStack {
+
+                NavigationLink(destination: MainScreen(),
+                        isActive: $vaultData.isMainScreenActive) {
+                    EmptyView()
+                }
+
                 List {
                     ForEach(vaults) { vault in
-                        Text("Item at")
+                        VaultItem(vault: vault)
+                                .contentShape(Rectangle())
+                                .onTapGesture {
+                                    isShowingPasswordInput.toggle()
+                                }
+                                .sheet(isPresented: $isShowingPasswordInput) {
+                                    NavigationView<PasswordUnlockScreen> {
+                                        PasswordUnlockScreen(vault: vault)
+                                    }
+                                }
                     }
+                            .onDelete(perform: askDeleteItem)
                 }
                         .listStyle(InsetGroupedListStyle())
             }
@@ -41,6 +62,37 @@ struct VaultsScreen: View {
                             NewVaultScreen()
                         }
                     }
+                    .actionSheet(isPresented: $isDeleteAlertOpen) {
+                        ActionSheet(title: Text(""), message: Text("are_you_sure_delete_vault"),
+                                buttons: [
+                                    .destructive(Text("delete")) {
+                                        deleteItems(offsets: offsets!)
+                                    },
+                                    .cancel()
+                                ]
+                        )
+                    }
+        }
+    }
+
+    private func askDeleteItem(offsets: IndexSet) {
+        self.offsets = offsets
+        isDeleteAlertOpen.toggle()
+    }
+
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            offsets.map {
+                vaults[$0]
+            }.forEach(viewContext.delete)
+
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                let defaultLog = Logger()
+                defaultLog.error("Error deleting a vault: \(nsError)")
+            }
         }
     }
 }

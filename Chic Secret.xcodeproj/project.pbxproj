@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,8 +33,16 @@
 		836D3E50299AA926615C4176 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D39367FC1EF4D6D933F0D /* LoadingView.swift */; };
 		836D3FF5ED6ECE5798D53EF0 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3177D817078DD765ADFF /* PasswordField.swift */; };
 		86C8ACB69C2B935233861B8C /* Pods_Chic_Secret__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1632EC08444AF15934BF127D /* Pods_Chic_Secret__macOS_.framework */; };
+		A7810BE5259B4475002CCB53 /* VaultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7810BE4259B4475002CCB53 /* VaultItem.swift */; };
+		A7810BE6259B4475002CCB53 /* VaultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7810BE4259B4475002CCB53 /* VaultItem.swift */; };
 		BDDB909154ACFFE5EB2C0CCE /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB909AF57ADDC244E9C018 /* Security.swift */; };
+		BDDB90C69F9AF51569F87B9B /* MbModalHackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9EC8F1639E4FE2C32E7C /* MbModalHackView.swift */; };
+		BDDB93108ABCE3D8194064B6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C081524B904735A10E3 /* MainScreen.swift */; };
+		BDDB95149DE52E7A0C057510 /* PasswordUnlockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */; };
+		BDDB9672117B1ED57B68C12D /* PasswordUnlockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */; };
+		BDDB97BD53E2DEF9E32B8ADC /* MbModalHackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9EC8F1639E4FE2C32E7C /* MbModalHackView.swift */; };
 		BDDB9B3082E1AFFA16C186A5 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB909AF57ADDC244E9C018 /* Security.swift */; };
+		BDDB9ED7A324DFC26D67D470 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C081524B904735A10E3 /* MainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +91,12 @@
 		836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaultsScreen.swift; sourceTree = "<group>"; };
 		836D39367FC1EF4D6D933F0D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTyped.swift; sourceTree = "<group>"; };
+		A7810BE4259B4475002CCB53 /* VaultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultItem.swift; sourceTree = "<group>"; };
 		AF58C5249279A0CCE26D8533 /* Pods-Chic Secret (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chic Secret (macOS).release.xcconfig"; path = "Target Support Files/Pods-Chic Secret (macOS)/Pods-Chic Secret (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		BDDB909AF57ADDC244E9C018 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
+		BDDB9C081524B904735A10E3 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordUnlockScreen.swift; sourceTree = "<group>"; };
+		BDDB9EC8F1639E4FE2C32E7C /* MbModalHackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MbModalHackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +214,8 @@
 				836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */,
 				836D3177D817078DD765ADFF /* PasswordField.swift */,
 				836D39367FC1EF4D6D933F0D /* LoadingView.swift */,
+				A7810BE4259B4475002CCB53 /* VaultItem.swift */,
+				BDDB9EC8F1639E4FE2C32E7C /* MbModalHackView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -211,6 +225,7 @@
 			children = (
 				836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */,
 				5FB3E790259A7EC000C98CFE /* NewVaultScreen.swift */,
+				BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */,
 			);
 			path = Vault;
 			sourceTree = "<group>";
@@ -219,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				836D33708D6C96D035B17A59 /* Vault */,
+				BDDB9C081524B904735A10E3 /* MainScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -249,7 +265,6 @@
 				54FC2E1E0672E5512E5EE8B2 /* Pods-Chic Secret (macOS).debug.xcconfig */,
 				AF58C5249279A0CCE26D8533 /* Pods-Chic Secret (macOS).release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -502,12 +517,16 @@
 				5FB3E752259A7BC600C98CFE /* Persistence.swift in Sources */,
 				5FB3E74C259A7BC600C98CFE /* Chic_Secret.xcdatamodeld in Sources */,
 				5FB3E791259A7EC000C98CFE /* NewVaultScreen.swift in Sources */,
+				A7810BE5259B4475002CCB53 /* VaultItem.swift in Sources */,
 				836D3181D40CD048F0127305 /* VaultsScreen.swift in Sources */,
 				836D320397ECC4729395212F /* TextFieldTyped.swift in Sources */,
 				836D3DF173104B62355F9666 /* PasswordField.swift in Sources */,
 				836D332F2A9020FE2787906C /* KeyboardManagement.swift in Sources */,
 				836D3C99E7A3D4397D6C7AF6 /* LoadingView.swift in Sources */,
 				BDDB9B3082E1AFFA16C186A5 /* Security.swift in Sources */,
+				BDDB97BD53E2DEF9E32B8ADC /* MbModalHackView.swift in Sources */,
+				BDDB9ED7A324DFC26D67D470 /* MainScreen.swift in Sources */,
+				BDDB95149DE52E7A0C057510 /* PasswordUnlockScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,12 +538,16 @@
 				5FB3E753259A7BC600C98CFE /* Persistence.swift in Sources */,
 				5FB3E74D259A7BC600C98CFE /* Chic_Secret.xcdatamodeld in Sources */,
 				5FB3E792259A7EC000C98CFE /* NewVaultScreen.swift in Sources */,
+				A7810BE6259B4475002CCB53 /* VaultItem.swift in Sources */,
 				836D39D04B6790AC5C08B327 /* VaultsScreen.swift in Sources */,
 				836D3D0394E15EF852B3320E /* TextFieldTyped.swift in Sources */,
 				836D3FF5ED6ECE5798D53EF0 /* PasswordField.swift in Sources */,
 				836D32F11AB4A90B444A063B /* KeyboardManagement.swift in Sources */,
 				836D3E50299AA926615C4176 /* LoadingView.swift in Sources */,
 				BDDB909154ACFFE5EB2C0CCE /* Security.swift in Sources */,
+				BDDB90C69F9AF51569F87B9B /* MbModalHackView.swift in Sources */,
+				BDDB93108ABCE3D8194064B6 /* MainScreen.swift in Sources */,
+				BDDB9672117B1ED57B68C12D /* PasswordUnlockScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

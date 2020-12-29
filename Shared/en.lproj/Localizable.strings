@@ -24,3 +24,15 @@
 "medium" = "Medium";
 "strong" = "Strong";
 "very_strong" = "Very strong";
+"passwords" = "Passwords";
+"categories" = "Categories";
+"profile" = "Profile";
+"settings" = "Settings";
+"unlock" = "Unlock";
+"wrong_password" = "Wrong password";
+"unlock_vault" = "Unlock the vault";
+"no_icon" = "No icon had been selected";
+"icon_color" = "Icon & Color";
+"new_category" = "New Category";
+"new_password" = "New Password";
+"username_email" = "Username/Email";

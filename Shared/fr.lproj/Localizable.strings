@@ -26,6 +26,7 @@
 "strong" = "Fort";
 "very_strong" = "Très fort";
 "passwords" = "Mots de passe";
+"password" = "Mot de passe";
 "categories" = "Catégories";
 "category" = "Catégorie";
 "profile" = "Profil";
@@ -39,3 +40,4 @@
 "new_password" = "Nouveau mot de passe";
 "username_email" = "Identifiant/Email";
 "generate_password" = "Générer un mot de passe";
+"ok" = "Ok";

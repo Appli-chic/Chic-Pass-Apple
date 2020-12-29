@@ -19,13 +19,14 @@ struct EntriesScreen: View {
     var body: some View {
         NavigationView {
             VStack {
-//                NavigationLink(destination: EntryDetail(entry: $currentEntry), isActive: $isShowingEntryDetail) {
-//                    EmptyView()
-//                }
+                NavigationLink(destination: EntryDetail(entry: $currentEntry), isActive: $isShowingEntryDetail) {
+                    EmptyView()
+                }
 
                 List {
                     ForEach(entries) { entry in
                         Text(entry.name ?? "")
+                                .contentShape(Rectangle())
                                 .onTapGesture {
                                     currentEntry = entry
                                     isShowingEntryDetail.toggle()

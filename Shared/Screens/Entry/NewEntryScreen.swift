@@ -21,40 +21,45 @@ struct NewEntryScreen: View {
     @State private var category: Category?
     @State private var isLoading = false
     @State private var isErrorAlertShown = false
+    @State private var isGeneratingPassword = false
     @State private var errorMessage = ""
     @State private var selectedCategoryIndex = 0
     @State var focused: [Bool] = [true, false, false]
 
     var body: some View {
-        LoadingView(isShowing: $isLoading) {
-            Form {
-                Section {
-                    TextFieldTyped(keyboardType: .default, returnVal: .next, tag: 0,
-                            placeholder: NSLocalizedString("name", comment: "name"),
-                            isSecureTextEntry: false, text: $name, isFocusable: self.$focused)
+        ZStack {
+            NavigationLink(destination: GeneratePasswordScreen(), isActive: $isGeneratingPassword) {
+                EmptyView()
+            }
 
-                    TextFieldTyped(keyboardType: .default, returnVal: .next, tag: 1,
-                            placeholder: NSLocalizedString("username_email", comment: "username_email"),
-                            isSecureTextEntry: false, text: $username, isFocusable: self.$focused)
-                            .autocapitalization(.none)
+            LoadingView(isShowing: $isLoading) {
+                Form {
+                    Section {
+                        TextFieldTyped(keyboardType: .default, returnVal: .next, tag: 0,
+                                placeholder: NSLocalizedString("name", comment: "name"),
+                                isSecureTextEntry: false, text: $name, isFocusable: self.$focused)
 
-                    PasswordField(label: "password", keyboardType: .default, returnVal: .done, tag: 2,
-                            isCheckingPasswordStrength: false, isFocusable: self.$focused, password: $password)
+                        TextFieldTyped(keyboardType: .default, returnVal: .next, tag: 1,
+                                placeholder: NSLocalizedString("username_email", comment: "username_email"),
+                                isSecureTextEntry: false, text: $username, isFocusable: self.$focused)
+                                .autocapitalization(.none)
 
-                    Button(action: {
-                        // activate theme!
-                    }) {
-                        HStack {
-                            Image(systemName: "wand.and.stars")
-                            Text("generate_password")
+                        PasswordField(label: "password", keyboardType: .default, returnVal: .done, tag: 2,
+                                isCheckingPasswordStrength: false, isFocusable: self.$focused, password: $password)
+
+                        Button(action: { isGeneratingPassword.toggle() }) {
+                            HStack {
+                                Image(systemName: "wand.and.stars")
+                                Text("generate_password")
+                            }
                         }
                     }
-                }
 
-                Section {
-                    Picker("category", selection: $selectedCategoryIndex) {
-                        ForEach(0 ..< categories.count) {
-                            Text(categories[$0].name!)
+                    Section {
+                        Picker("category", selection: $selectedCategoryIndex) {
+                            ForEach(0..<categories.count) {
+                                Text(categories[$0].name!)
+                            }
                         }
                     }
                 }

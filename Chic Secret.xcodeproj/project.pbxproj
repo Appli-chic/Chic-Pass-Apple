@@ -22,10 +22,16 @@
 		5FB3E774259A7C1400C98CFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FB3E776259A7C1400C98CFE /* Localizable.strings */; };
 		5FB3E791259A7EC000C98CFE /* NewVaultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E790259A7EC000C98CFE /* NewVaultScreen.swift */; };
 		5FB3E792259A7EC000C98CFE /* NewVaultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB3E790259A7EC000C98CFE /* NewVaultScreen.swift */; };
+		836D300C826E46A3269C7DA6 /* GeneratePasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D36E1AF9BC837226D1C04 /* GeneratePasswordScreen.swift */; };
+		836D3015A0B8219E27F3057B /* PasswordAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D34C633E64CADF1667D5B /* PasswordAttributed.swift */; };
+		836D3015D787E8D7E987239D /* GeneratePasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D36E1AF9BC837226D1C04 /* GeneratePasswordScreen.swift */; };
 		836D3181D40CD048F0127305 /* VaultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */; };
 		836D320397ECC4729395212F /* TextFieldTyped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */; };
 		836D32F11AB4A90B444A063B /* KeyboardManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3400119DCEC33B19D605 /* KeyboardManagement.swift */; };
 		836D332F2A9020FE2787906C /* KeyboardManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3400119DCEC33B19D605 /* KeyboardManagement.swift */; };
+		836D336194F84CCE4943CAE4 /* PasswordAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D34C633E64CADF1667D5B /* PasswordAttributed.swift */; };
+		836D3639C34DD221674F3559 /* EntryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D35F0F418D6EC9734A928 /* EntryDetail.swift */; };
+		836D37D07C90505F96809949 /* EntryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D35F0F418D6EC9734A928 /* EntryDetail.swift */; };
 		836D39D04B6790AC5C08B327 /* VaultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */; };
 		836D3C99E7A3D4397D6C7AF6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D39367FC1EF4D6D933F0D /* LoadingView.swift */; };
 		836D3D0394E15EF852B3320E /* TextFieldTyped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */; };
@@ -106,7 +112,10 @@
 		77A06E6B85AF97481F40AB6B /* Pods_Chic_Secret__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chic_Secret__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D3177D817078DD765ADFF /* PasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		836D3400119DCEC33B19D605 /* KeyboardManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManagement.swift; sourceTree = "<group>"; };
+		836D34C633E64CADF1667D5B /* PasswordAttributed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordAttributed.swift; sourceTree = "<group>"; };
+		836D35F0F418D6EC9734A928 /* EntryDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDetail.swift; sourceTree = "<group>"; };
 		836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaultsScreen.swift; sourceTree = "<group>"; };
+		836D36E1AF9BC837226D1C04 /* GeneratePasswordScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratePasswordScreen.swift; sourceTree = "<group>"; };
 		836D39367FC1EF4D6D933F0D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTyped.swift; sourceTree = "<group>"; };
 		A7810BE4259B4475002CCB53 /* VaultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultItem.swift; sourceTree = "<group>"; };
@@ -246,6 +255,7 @@
 				BDDB9EFBC977B7158A1F52F6 /* CategoryItem.swift */,
 				BDDB937F2A72471879A9312E /* IconPicker.swift */,
 				BDDB9E5350843890673F1A12 /* ColorPickerItem.swift */,
+				836D34C633E64CADF1667D5B /* PasswordAttributed.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -305,6 +315,8 @@
 			children = (
 				BDDB973DC561156A38F0C807 /* EntriesScreen.swift */,
 				BDDB9E6D916DF926AF183ADB /* NewEntryScreen.swift */,
+				836D35F0F418D6EC9734A928 /* EntryDetail.swift */,
+				836D36E1AF9BC837226D1C04 /* GeneratePasswordScreen.swift */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -588,6 +600,9 @@
 				BDDB9251B5AA71B4200ABF5C /* IconPicker.swift in Sources */,
 				BDDB9F2AFDCA2B0BA481D023 /* ColorPickerItem.swift in Sources */,
 				BDDB9282A753E7FEF73916D9 /* NewEntryScreen.swift in Sources */,
+				836D37D07C90505F96809949 /* EntryDetail.swift in Sources */,
+				836D300C826E46A3269C7DA6 /* GeneratePasswordScreen.swift in Sources */,
+				836D3015A0B8219E27F3057B /* PasswordAttributed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +633,9 @@
 				BDDB956F2952657512F35127 /* IconPicker.swift in Sources */,
 				BDDB977CE572BED3C8F19EC4 /* ColorPickerItem.swift in Sources */,
 				BDDB951FB938A57A8D84306B /* NewEntryScreen.swift in Sources */,
+				836D3639C34DD221674F3559 /* EntryDetail.swift in Sources */,
+				836D3015D787E8D7E987239D /* GeneratePasswordScreen.swift in Sources */,
+				836D336194F84CCE4943CAE4 /* PasswordAttributed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

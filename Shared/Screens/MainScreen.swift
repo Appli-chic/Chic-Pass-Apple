@@ -10,23 +10,23 @@ struct MainScreen: View {
 
     var body: some View {
         TabView(selection: $currentTab) {
-//            EntriesScreen()
-//                    .tag(1)
-//                    .tabItem {
-//                        Image(systemName: "list.star")
-//                        Text("passwords")
-//                    }
-//                    .navigationBarTitle("")
-//                    .navigationBarHidden(true)
-//
-//            CategoriesScreen(vaultData: vaultData)
-//                    .tag(2)
-//                    .tabItem {
-//                        Image(systemName: "folder.fill")
-//                        Text("categories")
-//                    }
-//                    .navigationBarTitle("")
-//                    .navigationBarHidden(true)
+            EntriesScreen()
+                    .tag(1)
+                    .tabItem {
+                        Image(systemName: "list.star")
+                        Text("passwords")
+                    }
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+
+            CategoriesScreen(vaultData: vaultData)
+                    .tag(2)
+                    .tabItem {
+                        Image(systemName: "folder.fill")
+                        Text("categories")
+                    }
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
 
             EmptyView()
                     .tag(3)

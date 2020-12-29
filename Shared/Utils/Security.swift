@@ -18,7 +18,7 @@ class Security {
     private static let salt: Array<UInt8> = Array(saltString.utf8)
     private static var aesInMemory: AES? = nil
 
-    static func encryptData(key: String, data: String) throws -> String {
+    static func encryptData(key: String, data: String, reloadAes: Bool) throws -> String {
         let secret: Array<UInt8> = Array(key.utf8)
         let aes = try getAESInstance(secret: secret, reloadAes: false)
 

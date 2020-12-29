@@ -91,7 +91,7 @@ struct NewVaultScreen: View {
             DispatchQueue.global().async {
                 withAnimation {
                     do {
-                        let signature = try Security.encryptData(key: password, data: Security.signature)
+                        let signature = try Security.encryptData(key: password, data: Security.signature, reloadAes: true)
 
                         let newVault = Vault(context: viewContext)
                         newVault.id = UUID.init()

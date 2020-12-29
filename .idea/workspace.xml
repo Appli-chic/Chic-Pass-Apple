@@ -4,25 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="Changing crypto integration and env variables.">
-      <change afterPath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Components/MbModalHackView.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Components/VaultItem.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Screens/MainScreen.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Screens/Vault/PasswordUnlockScreen.swift" afterDir="false" />
+    <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="Unlock vault.">
+      <change afterPath="$PROJECT_DIR$/Shared/Components/CategoryItem.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shared/Components/ColorPickerItem.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shared/Components/IconPicker.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shared/Screens/Category/CategoriesScreen.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shared/Screens/Category/NewCategoryScreen.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shared/Screens/Entry/EntriesScreen.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shared/Utils/StringProtocol.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shared/Utils/UIColor.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/CryptoSwift-iOS.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/CryptoSwift-iOS.xcscheme" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/CryptoSwift-macOS.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/CryptoSwift-macOS.xcscheme" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/Pods-Chic Secret (iOS).xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/Pods-Chic Secret (iOS).xcscheme" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/Pods-Chic Secret (macOS).xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/Pods-Chic Secret (macOS).xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/lazyos.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Chic_Secret.xcdatamodeld/Shared.xcdatamodel/contents" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Chic_Secret.xcdatamodeld/Shared.xcdatamodel/contents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/MainScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/MainScreen.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/NewVaultScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/NewVaultScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/VaultsScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/VaultsScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Utils/KeyboardManagement.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Utils/KeyboardManagement.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Utils/Security.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Utils/Security.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +90,8 @@
       <workItem from="1609229800215" duration="2536000" />
       <workItem from="1609236496283" duration="2475000" />
       <workItem from="1609239422633" duration="17000" />
-      <workItem from="1609239458614" duration="3347000" />
+      <workItem from="1609239458614" duration="4562000" />
+      <workItem from="1609245744805" duration="1724000" />
     </task>
     <task id="LOCAL-00001" summary="Adding vault and security.">
       <created>1609237179479</created>
@@ -103,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609239709906</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Unlock vault.">
+      <created>1609244460266</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609244460267</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +136,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Adding vault and security." />
     <MESSAGE value="Changing crypto integration and env variables." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing crypto integration and env variables." />
+    <MESSAGE value="Unlock vault." />
+    <option name="LAST_COMMIT_MESSAGE" value="Unlock vault." />
   </component>
 </project>

@@ -9,12 +9,14 @@ struct EntryDetail: View {
     @EnvironmentObject var vaultData: VaultData
     @Binding var entry: Entry
 
+    @State var password: String = ""
+
     private func onInit() {
         do {
             let key = vaultData.password
-            entry.password = try Security.decryptData(key: key, data: entry.password!, reloadAes: false)
+            password = try Security.decryptData(key: key, data: entry.password!, reloadAes: false)
         } catch {
-            entry.password = ""
+            password = ""
             let nsError = error as NSError
             let defaultLog = Logger()
             defaultLog.error("Error decrypting an entry password: \(nsError)")
@@ -25,7 +27,7 @@ struct EntryDetail: View {
         Form {
             Section {
                 Text(entry.username ?? "")
-                Text(entry.password ?? "")
+                Text(password)
             }
 
             Section(header: Text("category")) {

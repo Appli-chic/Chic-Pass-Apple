@@ -17,13 +17,15 @@ struct PasswordField: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                TextFieldTyped(keyboardType: keyboardType, returnVal: returnVal, tag: tag,
-                        placeholder: NSLocalizedString(label, comment: "hint"),
-                        isSecureTextEntry: isHidden, text: $password,
-                        isFocusable: $isFocusable)
-                        .disableAutocorrection(true)
-                        .autocapitalization(.none)
-                        .frame(height: 40)
+                GeometryReader { geometry in
+                    TextFieldTyped(keyboardType: keyboardType, returnVal: returnVal, tag: tag,
+                            placeholder: NSLocalizedString(label, comment: "hint"),
+                            isSecureTextEntry: isHidden, text: $password,
+                            isFocusable: $isFocusable)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                            .frame(maxWidth: geometry.size.width)
+                }
 
                 Button(action: {}) {
                     Image(systemName: isHidden ? "eye.fill" : "eye.slash.fill")

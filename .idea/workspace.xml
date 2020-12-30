@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="">
+    <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="Improving the password generation.">
+      <change afterPath="$PROJECT_DIR$/Shared/Components/EntryItem.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Components/PasswordAttributed.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/PasswordAttributed.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shared/Components/PasswordField.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/PasswordField.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Components/TextFieldTyped.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/TextFieldTyped.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Category/NewCategoryScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Category/NewCategoryScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Entry/EntriesScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Entry/EntriesScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Entry/EntryDetail.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Entry/EntryDetail.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shared/Screens/Entry/GeneratePasswordScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Entry/GeneratePasswordScreen.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shared/Screens/Entry/NewEntryScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Entry/NewEntryScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/NewVaultScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/NewVaultScreen.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" afterDir="false" />
     </list>
@@ -79,6 +85,7 @@
       <workItem from="1609239458614" duration="4562000" />
       <workItem from="1609245744805" duration="5547000" />
       <workItem from="1609264276294" duration="11807000" />
+      <workItem from="1609323156954" duration="5200000" />
     </task>
     <task id="LOCAL-00001" summary="Adding vault and security.">
       <created>1609237179479</created>
@@ -108,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609247616350</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Improving the password generation.">
+      <created>1609321419472</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609321419472</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +146,7 @@
     <MESSAGE value="Changing crypto integration and env variables." />
     <MESSAGE value="Unlock vault." />
     <MESSAGE value="Adding entries and categories screen." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding entries and categories screen." />
+    <MESSAGE value="Improving the password generation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improving the password generation." />
   </component>
 </project>

@@ -49,6 +49,7 @@
 		BDDB9282A753E7FEF73916D9 /* NewEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9E6D916DF926AF183ADB /* NewEntryScreen.swift */; };
 		BDDB92C6E2CDEBAE033E01FD /* NewCategoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C4331F814968C9864FD /* NewCategoryScreen.swift */; };
 		BDDB93108ABCE3D8194064B6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C081524B904735A10E3 /* MainScreen.swift */; };
+		BDDB93D8DACF102A31D83704 /* EntryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB962EB8EB6E990F65C9AF /* EntryItem.swift */; };
 		BDDB9439565FBE7335A5182D /* CategoriesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9F9475C6DDABB87191A5 /* CategoriesScreen.swift */; };
 		BDDB94544732D9F312C092E9 /* NewCategoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C4331F814968C9864FD /* NewCategoryScreen.swift */; };
 		BDDB95149DE52E7A0C057510 /* PasswordUnlockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */; };
@@ -60,6 +61,7 @@
 		BDDB977CE572BED3C8F19EC4 /* ColorPickerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9E5350843890673F1A12 /* ColorPickerItem.swift */; };
 		BDDB97A5D4A18A8BEFBF81E9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9D3FC36D1C4B9A6FFEC2 /* UIColor.swift */; };
 		BDDB97BD53E2DEF9E32B8ADC /* MbModalHackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9EC8F1639E4FE2C32E7C /* MbModalHackView.swift */; };
+		BDDB97F5F1AF39388F3C267F /* EntryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB962EB8EB6E990F65C9AF /* EntryItem.swift */; };
 		BDDB9AFEEA36B4AAB08C830C /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9EFBC977B7158A1F52F6 /* CategoryItem.swift */; };
 		BDDB9B3082E1AFFA16C186A5 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB909AF57ADDC244E9C018 /* Security.swift */; };
 		BDDB9D9C2072326FE4A9288C /* StringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C064B44677C0B8D1CCC /* StringProtocol.swift */; };
@@ -122,6 +124,7 @@
 		AF58C5249279A0CCE26D8533 /* Pods-Chic Secret (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chic Secret (macOS).release.xcconfig"; path = "Target Support Files/Pods-Chic Secret (macOS)/Pods-Chic Secret (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		BDDB909AF57ADDC244E9C018 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		BDDB937F2A72471879A9312E /* IconPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconPicker.swift; sourceTree = "<group>"; };
+		BDDB962EB8EB6E990F65C9AF /* EntryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryItem.swift; sourceTree = "<group>"; };
 		BDDB973DC561156A38F0C807 /* EntriesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntriesScreen.swift; sourceTree = "<group>"; };
 		BDDB9C064B44677C0B8D1CCC /* StringProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringProtocol.swift; sourceTree = "<group>"; };
 		BDDB9C081524B904735A10E3 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -256,6 +259,7 @@
 				BDDB937F2A72471879A9312E /* IconPicker.swift */,
 				BDDB9E5350843890673F1A12 /* ColorPickerItem.swift */,
 				836D34C633E64CADF1667D5B /* PasswordAttributed.swift */,
+				BDDB962EB8EB6E990F65C9AF /* EntryItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -603,6 +607,7 @@
 				836D37D07C90505F96809949 /* EntryDetail.swift in Sources */,
 				836D300C826E46A3269C7DA6 /* GeneratePasswordScreen.swift in Sources */,
 				836D3015A0B8219E27F3057B /* PasswordAttributed.swift in Sources */,
+				BDDB93D8DACF102A31D83704 /* EntryItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +641,7 @@
 				836D3639C34DD221674F3559 /* EntryDetail.swift in Sources */,
 				836D3015D787E8D7E987239D /* GeneratePasswordScreen.swift in Sources */,
 				836D336194F84CCE4943CAE4 /* PasswordAttributed.swift in Sources */,
+				BDDB97F5F1AF39388F3C267F /* EntryItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

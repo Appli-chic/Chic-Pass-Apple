@@ -22,6 +22,7 @@ struct TextFieldTyped: UIViewRepresentable {
         textField.delegate = context.coordinator
         textField.autocorrectionType = .no
         textField.isSecureTextEntry = isSecureTextEntry
+        textField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 
         return textField
     }

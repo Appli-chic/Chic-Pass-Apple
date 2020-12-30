@@ -15,6 +15,7 @@ struct NewEntryScreen: View {
             animation: .default)
     private var categories: FetchedResults<Category>
 
+
     @State private var name = ""
     @State private var username = ""
     @State private var password = ""
@@ -27,12 +28,12 @@ struct NewEntryScreen: View {
     @State var focused: [Bool] = [true, false, false]
 
     var body: some View {
-        ZStack {
-            NavigationLink(destination: GeneratePasswordScreen(), isActive: $isGeneratingPassword) {
-                EmptyView()
-            }
+        LoadingView(isShowing: $isLoading) {
+            ZStack {
+                NavigationLink(destination: GeneratePasswordScreen(password: $password), isActive: $isGeneratingPassword) {
+                    EmptyView()
+                }
 
-            LoadingView(isShowing: $isLoading) {
                 Form {
                     Section {
                         TextFieldTyped(keyboardType: .default, returnVal: .next, tag: 0,
@@ -83,9 +84,6 @@ struct NewEntryScreen: View {
                 .alert(isPresented: $isErrorAlertShown) {
                     Alert(title: Text("error"), message: Text(NSLocalizedString(errorMessage, comment: "Error message")), dismissButton: .cancel(Text("ok")))
                 }
-//                .onTapGesture {
-//                    hideKeyboard()
-//                }
     }
 
     private func addEntry() {
@@ -104,34 +102,39 @@ struct NewEntryScreen: View {
                 return
             }
 
+            if categories.isEmpty {
+                errorMessage = "category_empty"
+                isErrorAlertShown.toggle()
+                return
+            }
+
             isLoading = true
 
             DispatchQueue.global().async {
-                withAnimation {
-                    do {
-                        let hash = try Security.encryptData(key: vaultData.password, data: password, reloadAes: false)
+                do {
+                    let hash = try Security.encryptData(key: vaultData.password, data: password, reloadAes: false)
 
-                        let entry = Entry(context: viewContext)
-                        entry.id = UUID.init()
-                        entry.name = name.firstUppercased
-                        entry.username = username
-                        entry.password = hash
-                        entry.createdAt = Date()
-                        entry.updatedAt = Date()
-                        entry.vault = vaultData.vault
-                        entry.category = categories[selectedCategoryIndex]
+                    let entry = Entry(context: viewContext)
+                    entry.id = UUID.init()
+                    entry.name = name.firstUppercased
+                    entry.username = username
+                    entry.password = hash
+                    entry.createdAt = Date()
+                    entry.updatedAt = Date()
+                    entry.vault = vaultData.vault
+                    entry.category = categories[selectedCategoryIndex]
 
-                        try viewContext.save()
+                    try viewContext.save()
 
-                        DispatchQueue.main.async {
-                            mode.wrappedValue.dismiss()
-                        }
-                    } catch {
-                        let nsError = error as NSError
-                        let defaultLog = Logger()
-                        defaultLog.error("Error creating an entry: \(nsError)")
+                    DispatchQueue.main.async {
                         isLoading = false
+                        mode.wrappedValue.dismiss()
                     }
+                } catch {
+                    let nsError = error as NSError
+                    let defaultLog = Logger()
+                    defaultLog.error("Error creating an entry: \(nsError)")
+                    isLoading = false
                 }
             }
         }

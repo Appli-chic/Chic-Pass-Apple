@@ -25,15 +25,20 @@ struct EntriesScreen: View {
 
                 List {
                     ForEach(entries) { entry in
-                        Text(entry.name ?? "")
+                        EntryItem(entry: entry)
                                 .contentShape(Rectangle())
                                 .onTapGesture {
                                     currentEntry = entry
                                     isShowingEntryDetail.toggle()
                                 }
+                                .sheet(isPresented: $isAddingEntry) {
+                                    NavigationView {
+                                        NewEntryScreen()
+                                    }
+                                }
                     }
                 }
-                        .listStyle(InsetGroupedListStyle())
+                        .listStyle(PlainListStyle())
             }
                     .navigationBarTitle("passwords")
                     .toolbar {
@@ -50,10 +55,5 @@ struct EntriesScreen: View {
                         }
                     }
         }
-                .sheet(isPresented: $isAddingEntry) {
-                    NavigationView {
-                        NewEntryScreen()
-                    }
-                }
     }
 }

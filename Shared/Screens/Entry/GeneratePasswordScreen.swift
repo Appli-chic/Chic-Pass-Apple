@@ -13,13 +13,14 @@ let spaces = [
 struct GeneratePasswordScreen: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
 
+    @Binding var password: String
+
     @State private var height: CGFloat = .zero
     @State private var nbWords: Double = 8
     @State private var hasUppercase = true
     @State private var hasNumber = true
     @State private var hasSymbol = true
     @State private var isHidden = true
-    @State private var password = ""
     @State private var spaceTypeSelected = 0
 
     var body: some View {

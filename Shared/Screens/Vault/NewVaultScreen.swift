@@ -89,31 +89,30 @@ struct NewVaultScreen: View {
             isLoading = true
 
             DispatchQueue.global().async {
-                withAnimation {
-                    do {
-                        let signature = try Security.encryptData(key: password, data: Security.signature, reloadAes: true)
+                do {
+                    let signature = try Security.encryptData(key: password, data: Security.signature, reloadAes: true)
 
-                        let newVault = Vault(context: viewContext)
-                        newVault.id = UUID.init()
-                        newVault.name = name
-                        newVault.signature = signature
-                        newVault.createdAt = Date()
-                        newVault.updatedAt = Date()
+                    let newVault = Vault(context: viewContext)
+                    newVault.id = UUID.init()
+                    newVault.name = name
+                    newVault.signature = signature
+                    newVault.createdAt = Date()
+                    newVault.updatedAt = Date()
 
-                        try viewContext.save()
+                    try viewContext.save()
 
-                        DispatchQueue.main.async {
-                            vaultData.isMainScreenActive.toggle()
-                            vaultData.vault = newVault
-                            vaultData.password = password
-                            mode.wrappedValue.dismiss()
-                        }
-                    } catch {
-                        let nsError = error as NSError
-                        let defaultLog = Logger()
-                        defaultLog.error("Error creating a vault: \(nsError)")
+                    DispatchQueue.main.async {
+                        vaultData.isMainScreenActive.toggle()
+                        vaultData.vault = newVault
+                        vaultData.password = password
                         isLoading = false
+                        mode.wrappedValue.dismiss()
                     }
+                } catch {
+                    let nsError = error as NSError
+                    let defaultLog = Logger()
+                    defaultLog.error("Error creating a vault: \(nsError)")
+                    isLoading = false
                 }
             }
         }

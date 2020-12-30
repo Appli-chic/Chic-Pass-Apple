@@ -18,6 +18,8 @@
 "add" = "Add";
 "error" = "Error";
 "name_empty" = "The name must not be empty";
+"password_empty" = "The password must not be empty";
+"category_empty" = "The category must not be empty";
 "password_too_small" = "The password must be at least 6 characters long";
 "passwords_different" = "The two passwords must be the same";
 "weak" = "Weak";

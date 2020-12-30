@@ -19,6 +19,8 @@
 "add" = "Ajouter";
 "error" = "Erreur";
 "name_empty" = "Le nom ne doit pas être vide";
+"password_empty" = "Le mot de passe ne doit pas être vide";
+"category_empty" = "La catégorie ne doit pas être vide";
 "password_too_small" = "Le mot de passe doit faire au moins 6 caractères";
 "passwords_different" = "Les deux mots de passe doivent être identiques";
 "weak" = "Faible";

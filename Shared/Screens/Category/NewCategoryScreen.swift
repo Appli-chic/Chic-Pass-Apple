@@ -26,21 +26,18 @@ struct NewCategoryScreen: View {
     }
 
     var body: some View {
-        ZStack {
-            Form {
-                Section {
-                    TextField("name", text: $name)
-                }
+        LoadingView(isShowing: $isLoading) {
+            ZStack {
+                Form {
+                    Section {
+                        TextField("name", text: $name)
+                    }
 
-                Section(header: Text("icon_color")) {
-                    IconPicker(selectedIcon: $selectedIcon, color: color)
-                    ColorPickerItem(color: $color)
+                    Section(header: Text("icon_color")) {
+                        IconPicker(selectedIcon: $selectedIcon, color: color)
+                        ColorPickerItem(color: $color)
+                    }
                 }
-            }
-
-            if isLoading {
-                ProgressView()
-                        .scaleEffect(1.5, anchor: .center)
             }
         }
                 .navigationBarTitle("new_category")
@@ -49,13 +46,13 @@ struct NewCategoryScreen: View {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: { mode.wrappedValue.dismiss() }) {
                             Text("cancel")
-                        }
+                        }.disabled(isLoading)
                     }
 
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: addCategory) {
                             Text("add")
-                        }
+                        }.disabled(isLoading)
                     }
                 }
                 .alert(isPresented: $isErrorAlertShown) {
@@ -77,29 +74,27 @@ struct NewCategoryScreen: View {
             isLoading = true
 
             DispatchQueue.global().async {
-                withAnimation {
-                    do {
-                        let newCategory = Category(context: viewContext)
-                        newCategory.id = UUID.init()
-                        newCategory.name = name.firstUppercased
-                        newCategory.color = UIColor(color).toHex!
-                        newCategory.icon = selectedIcon.icon
-                        newCategory.createdAt = Date()
-                        newCategory.updatedAt = Date()
-                        newCategory.vault = vaultData.vault!
+                do {
+                    let newCategory = Category(context: viewContext)
+                    newCategory.id = UUID.init()
+                    newCategory.name = name.firstUppercased
+                    newCategory.color = UIColor(color).toHex!
+                    newCategory.icon = selectedIcon.icon
+                    newCategory.createdAt = Date()
+                    newCategory.updatedAt = Date()
+                    newCategory.vault = vaultData.vault!
 
-                        try viewContext.save()
+                    try viewContext.save()
 
-                        DispatchQueue.main.async {
-                            onNewCategoryCreated()
-                            mode.wrappedValue.dismiss()
-                        }
-                    } catch {
-                        let nsError = error as NSError
-                        let defaultLog = Logger()
-                        defaultLog.error("Error creating a category: \(nsError)")
-                        isLoading = false
+                    DispatchQueue.main.async {
+                        onNewCategoryCreated()
+                        mode.wrappedValue.dismiss()
                     }
+                } catch {
+                    let nsError = error as NSError
+                    let defaultLog = Logger()
+                    defaultLog.error("Error creating a category: \(nsError)")
+                    isLoading = false
                 }
             }
         }

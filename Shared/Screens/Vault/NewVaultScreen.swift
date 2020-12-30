@@ -28,7 +28,7 @@ struct NewVaultScreen: View {
                 Section(footer: Text("explanation_master_password")) {
                     TextFieldTyped(keyboardType: .default, returnVal: .next, tag: 0,
                             placeholder: NSLocalizedString("name", comment: "name"),
-                            isSecureTextEntry: false, text: $name, isFocusable: self.$focused)
+                            isSecureTextEntry: false, capitalization: .sentences, text: $name, isFocusable: self.$focused)
 
                     PasswordField(label: "password", keyboardType: .default, returnVal: .next, tag: 1,
                             isCheckingPasswordStrength: true, isFocusable: self.$focused, password: $password)

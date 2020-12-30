@@ -10,6 +10,7 @@ struct TextFieldTyped: UIViewRepresentable {
     let tag: Int
     let placeholder: String
     let isSecureTextEntry: Bool
+    let capitalization: UITextAutocapitalizationType
     @Binding var text: String
     @Binding var isFocusable: [Bool]
 
@@ -22,6 +23,7 @@ struct TextFieldTyped: UIViewRepresentable {
         textField.delegate = context.coordinator
         textField.autocorrectionType = .no
         textField.isSecureTextEntry = isSecureTextEntry
+        textField.autocapitalizationType = capitalization
         textField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 
         return textField

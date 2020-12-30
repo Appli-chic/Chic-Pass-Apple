@@ -41,6 +41,11 @@ struct VaultsScreen: View {
                                     currentVault = vault
                                     isShowingPasswordInput.toggle()
                                 }
+                                .sheet(isPresented: $isShowingPasswordInput) {
+                                    NavigationView<PasswordUnlockScreen> {
+                                        PasswordUnlockScreen(vault: $currentVault)
+                                    }
+                                }
                     }
                             .onDelete(perform: askDeleteItem)
                 }
@@ -57,12 +62,7 @@ struct VaultsScreen: View {
                     .sheet(isPresented: $showingNewVaultScreen) {
                         NavigationView<NewVaultScreen> {
                             NewVaultScreen()
-                        }
-                    }
-                    .sheet(isPresented: $isShowingPasswordInput) {
-                        NavigationView<PasswordUnlockScreen> {
-                            PasswordUnlockScreen(vault: $currentVault)
-                        }
+                        }.navigationViewStyle(StackNavigationViewStyle())
                     }
                     .actionSheet(isPresented: $isDeleteAlertOpen) {
                         ActionSheet(title: Text(""), message: Text("are_you_sure_delete_vault"),

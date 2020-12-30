@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="Filtering categories.">
-      <change afterPath="$PROJECT_DIR$/Shared/Components/Lists/EntrylistByVault.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Components/Lists/CategoryListByVault.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/Lists/CategoryListByVault.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Components/SearchNavigation.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/SearchNavigation.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Category/CategoriesScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Category/CategoriesScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Entry/EntriesScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Entry/EntriesScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/xcuserdata/applichic.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/xcuserdata/applichic.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/applichic.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/applichic.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Components/PasswordField.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/PasswordField.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Components/TextFieldTyped.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/TextFieldTyped.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shared/Screens/Entry/NewEntryScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Entry/NewEntryScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/NewVaultScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/NewVaultScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/VaultsScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/VaultsScreen.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,7 @@
       <workItem from="1609245744805" duration="5547000" />
       <workItem from="1609264276294" duration="11807000" />
       <workItem from="1609323156954" duration="15107000" />
-      <workItem from="1609349532204" duration="4465000" />
+      <workItem from="1609349532204" duration="9155000" />
     </task>
     <task id="LOCAL-00001" summary="Adding vault and security.">
       <created>1609237179479</created>

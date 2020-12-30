@@ -48,12 +48,11 @@ struct NewEntryScreen: View {
                     Section {
                         TextFieldTyped(keyboardType: .default, returnVal: .next, tag: 0,
                                 placeholder: NSLocalizedString("name", comment: "name"),
-                                isSecureTextEntry: false, text: $name, isFocusable: self.$focused)
+                                isSecureTextEntry: false, capitalization: .sentences, text: $name, isFocusable: self.$focused)
 
                         TextFieldTyped(keyboardType: .default, returnVal: .next, tag: 1,
                                 placeholder: NSLocalizedString("username_email", comment: "username_email"),
-                                isSecureTextEntry: false, text: $username, isFocusable: self.$focused)
-                                .autocapitalization(.none)
+                                isSecureTextEntry: false, capitalization: .none, text: $username, isFocusable: self.$focused)
 
                         PasswordField(label: "password", keyboardType: .default, returnVal: .done, tag: 2,
                                 isCheckingPasswordStrength: false, isFocusable: self.$focused, password: $password)
@@ -70,13 +69,6 @@ struct NewEntryScreen: View {
                         Picker("category", selection: $selectedCategoryIndex) {
                             ForEach(0..<categories.count) {
                                 Text(categories[$0].name!)
-                            }
-                        }
-
-                        Button(action: { isGeneratingPassword.toggle() }) {
-                            HStack {
-                                Image(systemName: "wand.and.stars")
-                                Text("new_category")
                             }
                         }
                     }

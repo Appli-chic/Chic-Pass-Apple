@@ -20,10 +20,9 @@ struct PasswordField: View {
                 GeometryReader { geometry in
                     TextFieldTyped(keyboardType: keyboardType, returnVal: returnVal, tag: tag,
                             placeholder: NSLocalizedString(label, comment: "hint"),
-                            isSecureTextEntry: isHidden, text: $password,
+                            isSecureTextEntry: isHidden, capitalization: .none, text: $password,
                             isFocusable: $isFocusable)
                             .disableAutocorrection(true)
-                            .autocapitalization(.none)
                             .frame(maxWidth: geometry.size.width)
                 }
 

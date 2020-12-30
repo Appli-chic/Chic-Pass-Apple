@@ -43,22 +43,46 @@ struct PasswordField: View {
             return Text("weak")
                     .padding([.top, .bottom])
                     .font(.callout)
-                    .foregroundColor(.red)
+                    .foregroundColor(Color(.systemRed))
         } else if password.count < 10 {
             return Text("medium")
                     .padding([.top, .bottom])
                     .font(.callout)
-                    .foregroundColor(.orange)
+                    .foregroundColor(Color(.systemOrange))
         } else if password.count < 15 {
             return Text("strong")
                     .padding([.top, .bottom])
                     .font(.callout)
-                    .foregroundColor(.green)
+                    .foregroundColor(Color(.systemGreen))
         } else {
             return Text("very_strong")
                     .padding([.top, .bottom])
                     .font(.callout)
-                    .foregroundColor(.green)
+                    .foregroundColor(Color(.systemGreen))
+        }
+    }
+
+    static func getGeneratedPasswordColor(password: String) -> Color {
+        if password.count < 20 {
+            return Color(.systemRed)
+        } else if password.count < 45 {
+            return Color(.systemOrange)
+        } else if password.count < 90 {
+            return Color(.systemGreen)
+        } else {
+            return Color(.systemGreen)
+        }
+    }
+
+    static func getGeneratedPasswordText(password: String) -> String {
+        if password.count < 20 {
+            return NSLocalizedString("weak", comment: "Password Strength")
+        } else if password.count < 45 {
+            return NSLocalizedString("medium", comment: "Password Strength")
+        } else if password.count < 90 {
+            return NSLocalizedString("strong", comment: "Password Strength")
+        } else {
+            return NSLocalizedString("very_strong", comment: "Password Strength")
         }
     }
 }

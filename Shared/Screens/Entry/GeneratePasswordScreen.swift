@@ -4,54 +4,104 @@
 
 import SwiftUI
 
+let spaces = [
+    NSLocalizedString("space", comment: "spaces"),
+    NSLocalizedString("underscore", comment: "spaces"),
+    NSLocalizedString("hyphen", comment: "spaces"),
+]
+
 struct GeneratePasswordScreen: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
 
     @State private var height: CGFloat = .zero
-    @State private var nbWords: Double = 6
+    @State private var nbWords: Double = 8
     @State private var hasUppercase = true
     @State private var hasNumber = true
     @State private var hasSymbol = true
+    @State private var isHidden = true
     @State private var password = ""
+    @State private var spaceTypeSelected = 0
 
     var body: some View {
         Form {
             Section(header: Text("password")) {
-                HStack {
-                    GeometryReader { geometry in
-                        PasswordAttributed(text: password, width: geometry.size.width - 16, dynamicHeight: $height) {
-                            $0.attributedText = PasswordAttributed.colorizePassword(password: password, isSecure: false)
-                        }.frame(minHeight: height)
-                    }
+                GeometryReader { geometry in
+                    PasswordAttributed(text: password, width: geometry.size.width, dynamicHeight: $height) {
+                        $0.attributedText = PasswordAttributed.colorizePassword(password: password, isSecure: false)
+                    }.frame(minHeight: height)
+                }
+                        .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
+                        .frame(minHeight: height + 16)
 
-                    Image(systemName: "eye.slash.fill")
-                            .foregroundColor(Color(UIColor.systemBlue))
-                            .padding(.leading)
-                }.frame(minHeight: height)
+                Text(PasswordField.getGeneratedPasswordText(password: password))
+                        .bold()
+                        .foregroundColor(Color(.white))
+                        .listRowBackground(PasswordField.getGeneratedPasswordColor(password: password))
             }
 
             Section {
                 HStack {
-                    Text("Words").padding(.trailing)
-                    Slider(value: $nbWords, in: 1...20, step: 1, onEditingChanged: { _ in generatePassword() })
+                    Text("words").padding(.trailing)
+                    Slider(value: Binding(get: { nbWords }, set: { value in
+                        if nbWords != value {
+                            nbWords = value
+                            generatePassword()
+                        }
+                    }), in: 1...20, step: 1)
                     Text("\(Int(nbWords))").padding(.leading).frame(width: 40)
                 }
             }
 
-            Section(header: Text("Options")) {
-                Toggle(isOn: $hasUppercase) {
-                    Text("Uppercase")
+            Section(header: Text("options")) {
+                Toggle(isOn: Binding(get: { hasUppercase }, set: { value in
+                    if hasUppercase != value {
+                        hasUppercase = value
+                        generatePassword()
+                    }
+                })) {
+                    Text("uppercase")
                 }
 
-                Toggle(isOn: $hasNumber) {
-                    Text("Number")
+                Toggle(isOn: Binding(get: { hasNumber }, set: { value in
+                    if hasNumber != value {
+                        hasNumber = value
+                        generatePassword()
+                    }
+                })) {
+                    Text("number")
                 }
 
-                Toggle(isOn: $hasSymbol) {
-                    Text("Symbol")
+                Toggle(isOn: Binding(get: { hasSymbol }, set: { value in
+                    if hasSymbol != value {
+                        hasSymbol = value
+                        generatePassword()
+                    }
+                })) {
+                    Text("symbol")
+                }
+            }
+
+            Section(header: Text("spacing")) {
+                Picker("spacing", selection: $spaceTypeSelected) {
+                    ForEach(0..<spaces.count) {
+                        Text(spaces[$0])
+                    }
+                }
+            }
+
+            Section {
+                Button(action: { generatePassword() }) {
+                    HStack {
+                        Spacer()
+                        Text("regenerate_password")
+                        Spacer()
+                    }
                 }
             }
         }
+                .onAppear {
+                    generatePassword()
+                }
                 .navigationBarTitle("generate_password")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -69,7 +119,7 @@ struct GeneratePasswordScreen: View {
         password = ""
 
         // Create the password
-        for _ in 0...Int(nbWords) {
+        for number in 0..<Int(nbWords) {
             let index = Int.random(in: 0..<words.count)
             var word = words[index]
 
@@ -101,7 +151,21 @@ struct GeneratePasswordScreen: View {
                 }
             }
 
-            word += " "
+            if number != Int(nbWords) - 1 {
+                switch spaceTypeSelected {
+                case 0:
+                    word += " "
+                    break;
+                case 1:
+                    word += "_"
+                    break;
+                case 2:
+                    word += "-"
+                    break;
+                default:
+                    word += " "
+                }
+            }
 
             password += word
         }

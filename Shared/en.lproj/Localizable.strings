@@ -40,3 +40,13 @@
 "username_email" = "Username/Email";
 "generate_password" = "Generate Password";
 "ok" = "Ok";
+"words" = "Words";
+"options" = "Options";
+"uppercase" = "Uppercase";
+"number" = "Number";
+"symbol" = "Symbol";
+"regenerate_password" = "Regenerate Password";
+"space" = "Space";
+"underscore" = "Underscore";
+"hyphen" = "Hyphen";
+"spacing" = "Spacing";

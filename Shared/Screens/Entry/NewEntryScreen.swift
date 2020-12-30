@@ -55,7 +55,7 @@ struct NewEntryScreen: View {
                         }
                     }
 
-                    Section {
+                    Section(header: Text("category")) {
                         Picker("category", selection: $selectedCategoryIndex) {
                             ForEach(0..<categories.count) {
                                 Text(categories[$0].name!)

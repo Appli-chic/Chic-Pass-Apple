@@ -41,3 +41,13 @@
 "username_email" = "Identifiant/Email";
 "generate_password" = "Générer un mot de passe";
 "ok" = "Ok";
+"words" = "Mots";
+"options" = "Options";
+"uppercase" = "Majuscule";
+"number" = "Nombre";
+"symbol" = "Symbole";
+"regenerate_password" = "Régénérer";
+"space" = "Espace";
+"underscore" = "Tiret du bas";
+"hyphen" = "Trait d'union";
+"spacing" = "Espacement";

@@ -31,7 +31,7 @@
 "password" = "Mot de passe";
 "categories" = "Catégories";
 "category" = "Catégorie";
-"profile" = "Profil";
+"health" = "Santé";
 "settings" = "Options";
 "unlock" = "Déverouiller";
 "wrong_password" = "Mauvais mot de passe";

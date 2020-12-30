@@ -25,7 +25,7 @@ struct NewEntryScreen: View {
     @State private var isGeneratingPassword = false
     @State private var errorMessage = ""
     @State private var selectedCategoryIndex = 0
-    @State var focused: [Bool] = [true, false, false]
+    @State var focused: [Bool] = [false, false, false]
 
     var body: some View {
         LoadingView(isShowing: $isLoading) {
@@ -70,7 +70,10 @@ struct NewEntryScreen: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: { mode.wrappedValue.dismiss() }) {
+                        Button(action: {
+                            hideKeyboard()
+                            mode.wrappedValue.dismiss()
+                        }) {
                             Text("cancel")
                         }.disabled(isLoading)
                     }

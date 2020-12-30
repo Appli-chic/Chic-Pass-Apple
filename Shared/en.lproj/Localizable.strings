@@ -30,7 +30,7 @@
 "password" = "Password";
 "categories" = "Categories";
 "category" = "Category";
-"profile" = "Profile";
+"health" = "Health";
 "settings" = "Settings";
 "unlock" = "Unlock";
 "wrong_password" = "Wrong password";

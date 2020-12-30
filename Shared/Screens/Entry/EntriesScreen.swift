@@ -15,9 +15,10 @@ struct EntriesScreen: View {
     @State var isAddingEntry = false
     @State var isShowingEntryDetail = false
     @State var currentEntry = Entry()
+    @State private var searchText: String = ""
 
     var body: some View {
-        NavigationView {
+        SearchNavigation(text: $searchText, search: search, cancel: cancel) {
             VStack {
                 NavigationLink(destination: EntryDetail(entry: $currentEntry), isActive: $isShowingEntryDetail) {
                     EmptyView()
@@ -39,6 +40,7 @@ struct EntriesScreen: View {
                     }
                 }
                         .listStyle(PlainListStyle())
+                        .resignKeyboardOnDragGesture()
             }
                     .navigationBarTitle("passwords")
                     .toolbar {
@@ -55,5 +57,11 @@ struct EntriesScreen: View {
                         }
                     }
         }
+    }
+
+    func search() {
+    }
+
+    func cancel() {
     }
 }

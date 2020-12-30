@@ -28,16 +28,16 @@ struct MainScreen: View {
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
 
-            EmptyView()
+            HealthScreen()
                     .tag(3)
                     .tabItem {
-                        Image(systemName: "person.fill")
-                        Text("profile")
+                        Image(systemName: "staroflife.fill")
+                        Text("health")
                     }
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
 
-            EmptyView()
+            SettingsScreen()
                     .tag(4)
                     .tabItem {
                         Image(systemName: "gearshape.fill")

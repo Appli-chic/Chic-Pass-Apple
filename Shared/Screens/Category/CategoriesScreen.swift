@@ -14,14 +14,17 @@ struct CategoriesScreen: View {
 
     var vaultData: VaultData
     @State private var isAddingCategory = false
+    @State private var searchText: String = ""
 
     var body: some View {
-        NavigationView {
+        SearchNavigation(text: $searchText, search: search, cancel: cancel) {
             List {
                 ForEach(categories) { category in
                     CategoryItem(category: category)
                 }
             }
+                    .listStyle(PlainListStyle())
+                    .resignKeyboardOnDragGesture()
                     .navigationBarTitle("categories")
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {
@@ -36,11 +39,20 @@ struct CategoriesScreen: View {
                             }
                         }
                     }
+                    .onTapGesture {
+                        hideKeyboard()
+                    }
         }
                 .sheet(isPresented: $isAddingCategory) {
                     NavigationView {
                         NewCategoryScreen()
                     }
                 }
+    }
+
+    func search() {
+    }
+
+    func cancel() {
     }
 }

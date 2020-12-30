@@ -22,6 +22,7 @@ struct VaultsScreen: View {
     @State private var isShowingPasswordInput = false
     @State private var isDeleteAlertOpen = false
     @State private var offsets: IndexSet? = nil
+    @State var currentVault: Vault = Vault()
 
     var body: some View {
         NavigationView {
@@ -37,12 +38,8 @@ struct VaultsScreen: View {
                         VaultItem(vault: vault)
                                 .contentShape(Rectangle())
                                 .onTapGesture {
+                                    currentVault = vault
                                     isShowingPasswordInput.toggle()
-                                }
-                                .sheet(isPresented: $isShowingPasswordInput) {
-                                    NavigationView<PasswordUnlockScreen> {
-                                        PasswordUnlockScreen(vault: vault)
-                                    }
                                 }
                     }
                             .onDelete(perform: askDeleteItem)
@@ -60,6 +57,11 @@ struct VaultsScreen: View {
                     .sheet(isPresented: $showingNewVaultScreen) {
                         NavigationView<NewVaultScreen> {
                             NewVaultScreen()
+                        }
+                    }
+                    .sheet(isPresented: $isShowingPasswordInput) {
+                        NavigationView<PasswordUnlockScreen> {
+                            PasswordUnlockScreen(vault: $currentVault)
                         }
                     }
                     .actionSheet(isPresented: $isDeleteAlertOpen) {

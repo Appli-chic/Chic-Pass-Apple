@@ -102,7 +102,7 @@ struct NewVaultScreen: View {
                     try viewContext.save()
 
                     DispatchQueue.main.async {
-                        vaultData.isMainScreenActive.toggle()
+                        vaultData.isMainScreenActive = true
                         vaultData.vault = newVault
                         vaultData.password = password
                         isLoading = false

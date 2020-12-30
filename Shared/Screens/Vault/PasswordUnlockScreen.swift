@@ -14,7 +14,7 @@ struct PasswordUnlockScreen: View {
     @State private var isLoading = false
     @State var focused: [Bool] = [true]
 
-    var vault: Vault
+    @Binding var vault: Vault
 
     var body: some View {
         LoadingView(isShowing: $isLoading) {
@@ -74,7 +74,7 @@ struct PasswordUnlockScreen: View {
 
                 if signature == Security.signature {
                     DispatchQueue.main.async {
-                        vaultData.isMainScreenActive.toggle()
+                        vaultData.isMainScreenActive = true
                         vaultData.vault = vault
                         vaultData.password = password
                         isLoading = false

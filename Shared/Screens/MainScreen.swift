@@ -19,7 +19,7 @@ struct MainScreen: View {
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
 
-            CategoriesScreen(vaultData: vaultData)
+            CategoriesScreen()
                     .tag(2)
                     .tabItem {
                         Image(systemName: "folder.fill")
@@ -48,20 +48,5 @@ struct MainScreen: View {
         }
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
-    }
-
-    private func getTitle() -> String {
-        switch currentTab {
-        case 1:
-            return NSLocalizedString("passwords", comment: "passwords")
-        case 2:
-            return NSLocalizedString("categories", comment: "categories")
-        case 3:
-            return NSLocalizedString("profile", comment: "profile")
-        case 4:
-            return NSLocalizedString("settings", comment: "settings")
-        default:
-            return NSLocalizedString("passwords", comment: "passwords")
-        }
     }
 }

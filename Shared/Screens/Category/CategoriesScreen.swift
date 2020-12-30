@@ -6,22 +6,20 @@ import SwiftUI
 
 struct CategoriesScreen: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @EnvironmentObject var vaultData: VaultData
 
     @FetchRequest(
             sortDescriptors: [NSSortDescriptor(keyPath: \Category.createdAt, ascending: true)],
             animation: .default)
     private var categories: FetchedResults<Category>
 
-    var vaultData: VaultData
     @State private var isAddingCategory = false
     @State private var searchText: String = ""
 
     var body: some View {
         SearchNavigation(text: $searchText, search: search, cancel: cancel) {
-            List {
-                ForEach(categories) { category in
-                    CategoryItem(category: category)
-                }
+            CategoryListByVault(filterValue: vaultData.vault!.id!.uuidString) { (category: Category) in
+                CategoryItem(category: category)
             }
                     .listStyle(PlainListStyle())
                     .resignKeyboardOnDragGesture()

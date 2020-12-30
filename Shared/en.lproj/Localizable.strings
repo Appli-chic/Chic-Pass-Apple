@@ -13,7 +13,6 @@
 "verify_password" = "Verify password";
 "cancel" = "Cancel";
 "delete" = "Delete";
-"warning" = "Warning";
 "are_you_sure_delete_vault" = "Are you sure to delete this vault ?";
 "add" = "Add";
 "error" = "Error";
@@ -35,7 +34,6 @@
 "unlock" = "Unlock";
 "wrong_password" = "Wrong password";
 "unlock_vault" = "Unlock the vault";
-"no_icon" = "No icon had been selected";
 "icon_color" = "Icon & Color";
 "new_category" = "New Category";
 "new_password" = "New Password";

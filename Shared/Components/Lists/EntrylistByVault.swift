@@ -1,11 +1,11 @@
 //
-// Created by Lazyos on 30/12/2020.
+// Created by Applichic on 12/30/20.
 //
 
 import SwiftUI
 import CoreData
 
-struct CategoryListByVault<T: Category, Content: View>: View {
+struct EntryListByVault<T: Entry, Content: View>: View {
     var fetchRequest: FetchRequest<T>
     var items: FetchedResults<T> {
         fetchRequest.wrappedValue
@@ -24,12 +24,18 @@ struct CategoryListByVault<T: Category, Content: View>: View {
         var predicate = NSPredicate(format: "vault.id == %@", filterValue)
 
         if !search.isEmpty {
-            predicate = NSPredicate(format: "vault.id == %@ and name contains[cd] %@", filterValue, search.lowercased())
+            predicate = NSPredicate(format: """
+                                            vault.id == %@ 
+                                            and (
+                                            name contains[cd] %@ or username contains[cd] %@ or category.name contains[cd] %@
+                                            )
+                                            """,
+                    filterValue, search.lowercased(), search.lowercased(), search.lowercased())
         }
 
         fetchRequest = FetchRequest<T>(
-                entity: T.entity(),
-                sortDescriptors: [NSSortDescriptor(keyPath: \Category.createdAt, ascending: true)],
+                entity: Entry.entity(),
+                sortDescriptors: [NSSortDescriptor(keyPath: \Entry.createdAt, ascending: true)],
                 predicate: predicate
         )
         self.content = content

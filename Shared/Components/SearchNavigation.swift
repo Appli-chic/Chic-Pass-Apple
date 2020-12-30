@@ -60,6 +60,7 @@ struct SearchNavigation<Content: View>: UIViewControllerRepresentable {
         }
 
         func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            text = ""
             cancel()
         }
     }

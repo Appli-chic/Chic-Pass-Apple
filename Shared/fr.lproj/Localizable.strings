@@ -14,7 +14,6 @@
 "verify_password" = "Vérifier le mot de passe";
 "cancel" = "Annuler";
 "delete" = "Supprimer";
-"warning" = "Attention";
 "are_you_sure_delete_vault" = "Êtes-vous sûr de vouloir supprimer ce coffre?";
 "add" = "Ajouter";
 "error" = "Erreur";
@@ -36,7 +35,6 @@
 "unlock" = "Déverouiller";
 "wrong_password" = "Mauvais mot de passe";
 "unlock_vault" = "Déverouiller le coffre";
-"no_icon" = "Aucune icône a été sélectionnée";
 "icon_color" = "Icône & Couleur";
 "new_category" = "Nouvelle Catégorie";
 "new_password" = "Nouveau mot de passe";

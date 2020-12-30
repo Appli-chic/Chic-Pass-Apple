@@ -8,13 +8,11 @@ import os
 struct NewEntryScreen: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @EnvironmentObject var vaultData: VaultData
 
-    @FetchRequest(
-            sortDescriptors: [NSSortDescriptor(keyPath: \Category.createdAt, ascending: true)],
-            animation: .default)
-    private var categories: FetchedResults<Category>
-
+    private var fetchRequest: FetchRequest<Category>
+    private var categories: FetchedResults<Category> {
+        fetchRequest.wrappedValue
+    }
 
     @State private var name = ""
     @State private var username = ""
@@ -26,6 +24,18 @@ struct NewEntryScreen: View {
     @State private var errorMessage = ""
     @State private var selectedCategoryIndex = 0
     @State var focused: [Bool] = [false, false, false]
+
+    var vaultData: VaultData
+
+    init(vaultData: VaultData) {
+        fetchRequest = FetchRequest<Category>(
+                entity: Category.entity(),
+                sortDescriptors: [NSSortDescriptor(keyPath: \Category.createdAt, ascending: true)],
+                predicate: NSPredicate(format: "vault.id == %@", vaultData.vault!.id!.uuidString)
+        )
+
+        self.vaultData = vaultData
+    }
 
     var body: some View {
         LoadingView(isShowing: $isLoading) {
@@ -62,6 +72,13 @@ struct NewEntryScreen: View {
                                 Text(categories[$0].name!)
                             }
                         }
+
+                        Button(action: { isGeneratingPassword.toggle() }) {
+                            HStack {
+                                Image(systemName: "wand.and.stars")
+                                Text("new_category")
+                            }
+                        }
                     }
                 }
             }
@@ -85,7 +102,8 @@ struct NewEntryScreen: View {
                     }
                 }
                 .alert(isPresented: $isErrorAlertShown) {
-                    Alert(title: Text("error"), message: Text(NSLocalizedString(errorMessage, comment: "Error message")), dismissButton: .cancel(Text("ok")))
+                    Alert(title: Text("error"), message: Text(NSLocalizedString(errorMessage, comment: "Error message")),
+                            dismissButton: .cancel(Text("ok")))
                 }
     }
 

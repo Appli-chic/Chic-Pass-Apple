@@ -25,6 +25,7 @@
 		836D300C826E46A3269C7DA6 /* GeneratePasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D36E1AF9BC837226D1C04 /* GeneratePasswordScreen.swift */; };
 		836D3015A0B8219E27F3057B /* PasswordAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D34C633E64CADF1667D5B /* PasswordAttributed.swift */; };
 		836D3015D787E8D7E987239D /* GeneratePasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D36E1AF9BC837226D1C04 /* GeneratePasswordScreen.swift */; };
+		836D30F59B594470953418DE /* EntrylistByVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3D91F87656D9903190E5 /* EntrylistByVault.swift */; };
 		836D3181D40CD048F0127305 /* VaultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */; };
 		836D320397ECC4729395212F /* TextFieldTyped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */; };
 		836D32F11AB4A90B444A063B /* KeyboardManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3400119DCEC33B19D605 /* KeyboardManagement.swift */; };
@@ -33,6 +34,7 @@
 		836D3639C34DD221674F3559 /* EntryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D35F0F418D6EC9734A928 /* EntryDetail.swift */; };
 		836D37D07C90505F96809949 /* EntryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D35F0F418D6EC9734A928 /* EntryDetail.swift */; };
 		836D39D04B6790AC5C08B327 /* VaultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */; };
+		836D3AD7567B7C6CE76412C7 /* EntrylistByVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3D91F87656D9903190E5 /* EntrylistByVault.swift */; };
 		836D3C99E7A3D4397D6C7AF6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D39367FC1EF4D6D933F0D /* LoadingView.swift */; };
 		836D3D0394E15EF852B3320E /* TextFieldTyped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */; };
 		836D3DF173104B62355F9666 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D3177D817078DD765ADFF /* PasswordField.swift */; };
@@ -127,6 +129,7 @@
 		836D35FADD9ABD49BF3164EA /* VaultsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaultsScreen.swift; sourceTree = "<group>"; };
 		836D36E1AF9BC837226D1C04 /* GeneratePasswordScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratePasswordScreen.swift; sourceTree = "<group>"; };
 		836D39367FC1EF4D6D933F0D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		836D3D91F87656D9903190E5 /* EntrylistByVault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntrylistByVault.swift; sourceTree = "<group>"; };
 		836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTyped.swift; sourceTree = "<group>"; };
 		A7810BE4259B4475002CCB53 /* VaultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultItem.swift; sourceTree = "<group>"; };
 		AF58C5249279A0CCE26D8533 /* Pods-Chic Secret (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chic Secret (macOS).release.xcconfig"; path = "Target Support Files/Pods-Chic Secret (macOS)/Pods-Chic Secret (macOS).release.xcconfig"; sourceTree = "<group>"; };
@@ -361,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				BDDB92BE18EB43BDB0A3BE24 /* CategoryListByVault.swift */,
+				836D3D91F87656D9903190E5 /* EntrylistByVault.swift */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -652,6 +656,7 @@
 				BDDB9466A7C85776242E448E /* HealthScreen.swift in Sources */,
 				BDDB9F78455E249C32941B48 /* SearchNavigation.swift in Sources */,
 				BDDB983277AA7508D578789E /* CategoryListByVault.swift in Sources */,
+				836D3AD7567B7C6CE76412C7 /* EntrylistByVault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +695,7 @@
 				BDDB935040C724B6A18BD559 /* HealthScreen.swift in Sources */,
 				BDDB94A380073E4BE803E749 /* SearchNavigation.swift in Sources */,
 				BDDB971B267F802AED9495F0 /* CategoryListByVault.swift in Sources */,
+				836D30F59B594470953418DE /* EntrylistByVault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

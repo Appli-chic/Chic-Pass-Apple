@@ -6,11 +6,7 @@ import SwiftUI
 
 struct EntriesScreen: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-
-    @FetchRequest(
-            sortDescriptors: [NSSortDescriptor(keyPath: \Entry.createdAt, ascending: true)],
-            animation: .default)
-    private var entries: FetchedResults<Entry>
+    @EnvironmentObject var vaultData: VaultData
 
     @State var isAddingEntry = false
     @State var isShowingEntryDetail = false
@@ -24,20 +20,13 @@ struct EntriesScreen: View {
                     EmptyView()
                 }
 
-                List {
-                    ForEach(entries) { entry in
-                        EntryItem(entry: entry)
-                                .contentShape(Rectangle())
-                                .onTapGesture {
-                                    currentEntry = entry
-                                    isShowingEntryDetail.toggle()
-                                }
-                                .sheet(isPresented: $isAddingEntry) {
-                                    NavigationView {
-                                        NewEntryScreen()
-                                    }
-                                }
-                    }
+                EntryListByVault(filterValue: vaultData.vault!.id!.uuidString, search: searchText) { (entry: Entry) in
+                    EntryItem(entry: entry)
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                currentEntry = entry
+                                isShowingEntryDetail.toggle()
+                            }
                 }
                         .listStyle(PlainListStyle())
                         .resignKeyboardOnDragGesture()
@@ -54,6 +43,11 @@ struct EntriesScreen: View {
                             Button(action: { isAddingEntry.toggle() }) {
                                 Label("", systemImage: "plus")
                             }
+                        }
+                    }
+                    .sheet(isPresented: $isAddingEntry) {
+                        NavigationView {
+                            NewEntryScreen(vaultData: vaultData)
                         }
                     }
         }

@@ -39,6 +39,7 @@ struct SearchNavigation<Content: View>: UIViewControllerRepresentable {
             searchController.searchBar.autocapitalizationType = .none
             searchController.obscuresBackgroundDuringPresentation = false
             rootViewController.navigationItem.searchController = searchController
+            rootViewController.navigationItem.hidesSearchBarWhenScrolling = false
 
             _text = searchText
             search = searchAction

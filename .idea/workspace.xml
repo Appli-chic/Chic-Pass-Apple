@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Shared/Components/Lists/CategoryListInNewEntry.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Components/Lists/CategoryListByVault.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/Lists/CategoryListByVault.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Components/Lists/EntrylistByVault.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/Lists/EntrylistByVault.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Category/NewCategoryScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Category/NewCategoryScreen.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shared/Screens/Entry/NewEntryScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Entry/NewEntryScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Settings/BiometryScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Settings/BiometryScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/PasswordUnlockScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/PasswordUnlockScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Utils/Color.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Utils/Color.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Utils/Security.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Utils/Security.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +82,7 @@
       <workItem from="1609323156954" duration="15107000" />
       <workItem from="1609349532204" duration="9828000" />
       <workItem from="1609399011104" duration="1606000" />
-      <workItem from="1609405670042" duration="15789000" />
+      <workItem from="1609405670042" duration="18397000" />
     </task>
     <task id="LOCAL-00001" summary="Adding vault and security.">
       <created>1609237179479</created>

@@ -58,3 +58,4 @@
 "cant_delete_category" = "Impossible de supprimer cette catégorie car elle contient encore des mots de passe";
 "biometry" = "Biométrie";
 "login_signup" = "Se connecter/S'inscrire";
+"create_category" = "Créer une nouvelle catégorie";

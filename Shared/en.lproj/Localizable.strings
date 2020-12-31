@@ -57,3 +57,4 @@
 "cant_delete_category" = "Impossible to delete this category because the category is not empty";
 "biometry" = "Biometry";
 "login_signup" = "Login/Signup";
+"create_category" = "Create a new category";

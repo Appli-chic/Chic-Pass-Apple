@@ -23,6 +23,7 @@ struct NewEntryScreen: View {
     @State private var isGeneratingPassword = false
     @State private var errorMessage = ""
     @State private var selectedCategoryIndex = 0
+    @State private var isAddingCategory = false
     @State var focused: [Bool] = [false, false, false]
 
     var vaultData: VaultData
@@ -71,6 +72,12 @@ struct NewEntryScreen: View {
                                 Text(category.name!)
                             }
                         }
+
+                        Button(action: { isAddingCategory.toggle() }) {
+                            HStack {
+                                Text("create_category")
+                            }
+                        }
                     }
                 }
             }
@@ -91,6 +98,12 @@ struct NewEntryScreen: View {
                         Button(action: addEntry) {
                             Text("add")
                         }.disabled(isLoading)
+                    }
+                }
+                .sheet(isPresented: $isAddingCategory) {
+                    NavigationView {
+                        NewCategoryScreen {
+                        }
                     }
                 }
                 .alert(isPresented: $isErrorAlertShown) {

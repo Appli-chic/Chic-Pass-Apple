@@ -101,7 +101,9 @@ struct NewEntryScreen: View {
 
     private func addEntry() {
         if !isLoading {
+            #if os(iOS)
             hideKeyboard()
+            #endif
 
             if name.isEmpty {
                 errorMessage = "name_empty"

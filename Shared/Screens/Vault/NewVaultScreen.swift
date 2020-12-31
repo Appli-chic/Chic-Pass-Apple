@@ -57,7 +57,9 @@ struct NewVaultScreen: View {
                             dismissButton: .cancel(Text("ok")))
                 }
                 .onTapGesture {
+                    #if os(iOS)
                     hideKeyboard()
+                    #endif
                 }
                 .allowAutoDismiss {
                     !isLoading
@@ -66,7 +68,9 @@ struct NewVaultScreen: View {
 
     private func addVault() {
         if !isLoading {
+            #if os(iOS)
             hideKeyboard()
+            #endif
 
             if name.isEmpty {
                 errorMessage = "name_empty"

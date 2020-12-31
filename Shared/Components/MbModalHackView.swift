@@ -2,6 +2,7 @@
 // Created by Lazyos on 29/12/2020.
 //
 
+#if os(iOS)
 import SwiftUI
 
 struct MbModalHackView: UIViewControllerRepresentable {
@@ -71,3 +72,4 @@ extension View {
                 .background(MbModalHackView(dismissable: { dismissable }))
     }
 }
+#endif

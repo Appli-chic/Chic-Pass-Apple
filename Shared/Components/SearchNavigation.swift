@@ -2,6 +2,7 @@
 // Created by Lazyos on 30/12/2020.
 //
 
+#if os(iOS)
 import SwiftUI
 
 struct SearchNavigation<Content: View>: UIViewControllerRepresentable {
@@ -66,3 +67,4 @@ struct SearchNavigation<Content: View>: UIViewControllerRepresentable {
     }
 
 }
+#endif

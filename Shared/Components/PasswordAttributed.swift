@@ -20,6 +20,7 @@ let words = ["ability", "able", "about", "above", "accept", "according", "accoun
 "agency", "agent", "ago", "agree", "agreement", "ahead", "air", "all", "allow", "almost", "alone", "along", "already",
 "also", "although", "always", "american", "among", "amount", "analysis", "and", "animal", "another", "answer"]
 
+#if os(iOS)
 struct PasswordAttributed: UIViewRepresentable {
 
     typealias TheUIView = UILabel
@@ -87,3 +88,4 @@ struct PasswordAttributed: UIViewRepresentable {
         return NSMutableAttributedString.init(string: password)
     }
 }
+#endif

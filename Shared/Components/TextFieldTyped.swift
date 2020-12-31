@@ -2,6 +2,7 @@
 // Created by Applichic on 12/28/20.
 //
 
+#if os(iOS)
 import SwiftUI
 
 struct TextFieldTyped: UIViewRepresentable {
@@ -87,3 +88,4 @@ struct TextFieldTyped: UIViewRepresentable {
         }
     }
 }
+#endif

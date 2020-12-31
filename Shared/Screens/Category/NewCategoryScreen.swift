@@ -63,7 +63,9 @@ struct NewCategoryScreen: View {
 
     private func addCategory() {
         if !isLoading {
+            #if os(iOS)
             hideKeyboard()
+            #endif
 
             if name.isEmpty {
                 errorMessage = "name_empty"

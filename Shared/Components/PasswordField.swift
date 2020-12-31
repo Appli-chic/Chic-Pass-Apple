@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+#if os(iOS)
 struct PasswordField: View {
     let label: String
     let keyboardType: UIKeyboardType
@@ -87,3 +88,4 @@ struct PasswordField: View {
         }
     }
 }
+#endif

@@ -34,7 +34,6 @@ struct PasswordUnlockScreen: View {
                 }
             }
         }
-                .background(Color(UIColor.secondarySystemBackground))
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: { mode.wrappedValue.dismiss() }) {
@@ -56,7 +55,9 @@ struct PasswordUnlockScreen: View {
                 .navigationBarTitle("vault")
                 .navigationBarTitleDisplayMode(.inline)
                 .onTapGesture {
+                    #if os(iOS)
                     hideKeyboard()
+                    #endif
                 }
                 .allowAutoDismiss {
                     !isLoading
@@ -65,7 +66,9 @@ struct PasswordUnlockScreen: View {
     }
 
     private func checkPassword() {
+        #if os(iOS)
         hideKeyboard()
+        #endif
         isLoading = true
 
         DispatchQueue.global().async {

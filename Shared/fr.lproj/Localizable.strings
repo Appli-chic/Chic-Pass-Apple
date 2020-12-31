@@ -14,9 +14,10 @@
 "verify_password" = "Vérifier le mot de passe";
 "cancel" = "Annuler";
 "delete" = "Supprimer";
-"are_you_sure_delete_vault" = "Êtes-vous sûr de vouloir supprimer ce coffre?";
+"are_you_sure_delete_vault" = "Êtes-vous sûr de vouloir supprimer ce coffre ?";
 "add" = "Ajouter";
 "error" = "Erreur";
+"warning" = "Attention";
 "name_empty" = "Le nom ne doit pas être vide";
 "password_empty" = "Le mot de passe ne doit pas être vide";
 "category_empty" = "La catégorie ne doit pas être vide";
@@ -51,3 +52,7 @@
 "underscore" = "Tiret du bas";
 "hyphen" = "Trait d'union";
 "spacing" = "Espacement";
+"delete" = "Supprimer";
+"are_you_sure_delete_entry" = "Êtes-vous sûr de vouloir supprimer ce mot de passe ?";
+"are_you_sure_delete_category" = "Êtes-vous sûr de vouloir supprimer cette catégorie ?";
+"cant_delete_category" = "Impossible de supprimer cette catégorie car elle contient encore des mots de passe";

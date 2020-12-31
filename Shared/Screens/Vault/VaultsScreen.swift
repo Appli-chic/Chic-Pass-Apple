@@ -22,7 +22,7 @@ struct VaultsScreen: View {
     @State private var isShowingPasswordInput = false
     @State private var isDeleteAlertOpen = false
     @State private var offsets: IndexSet? = nil
-    @State var currentVault: Vault = Vault()
+    @State private var currentVault: Vault = Vault()
 
     var body: some View {
         NavigationView {
@@ -47,7 +47,7 @@ struct VaultsScreen: View {
                                     }
                                 }
                     }
-                            .onDelete(perform: askDeleteItem)
+                            .onDelete(perform: askDeleteVault)
                 }
                         .listStyle(InsetGroupedListStyle())
             }
@@ -68,7 +68,7 @@ struct VaultsScreen: View {
                         ActionSheet(title: Text(""), message: Text("are_you_sure_delete_vault"),
                                 buttons: [
                                     .destructive(Text("delete")) {
-                                        deleteItems(offsets: offsets!)
+                                        deleteVault(offsets: offsets!)
                                     },
                                     .cancel()
                                 ]
@@ -77,12 +77,12 @@ struct VaultsScreen: View {
         }
     }
 
-    private func askDeleteItem(offsets: IndexSet) {
+    private func askDeleteVault(offsets: IndexSet) {
         self.offsets = offsets
         isDeleteAlertOpen.toggle()
     }
 
-    private func deleteItems(offsets: IndexSet) {
+    private func deleteVault(offsets: IndexSet) {
         withAnimation {
             offsets.map {
                 vaults[$0]

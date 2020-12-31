@@ -13,14 +13,24 @@ struct EntryListByVault<T: Entry, Content: View>: View {
 
     // this is our content closure; we'll call this once for each item in the list
     let content: (T) -> Content
+    let onDelete: (Entry) -> Void
 
     var body: some View {
-        List(fetchRequest.wrappedValue, id: \.self) { item in
-            self.content(item)
+        List {
+            ForEach(fetchRequest.wrappedValue) { item in
+                self.content(item)
+            }
+                    .onDelete(perform: { offsets in
+                        let entry = offsets.map {
+                            fetchRequest.wrappedValue[$0]
+                        }.first.unsafelyUnwrapped
+                        onDelete(entry)
+                    })
         }
     }
 
-    init(filterValue: String, search: String, @ViewBuilder content: @escaping (T) -> Content) {
+    init(filterValue: String, search: String, onDelete: @escaping (Entry) -> Void,
+         @ViewBuilder content: @escaping (T) -> Content) {
         var predicate = NSPredicate(format: "vault.id == %@", filterValue)
 
         if !search.isEmpty {
@@ -39,5 +49,6 @@ struct EntryListByVault<T: Entry, Content: View>: View {
                 predicate: predicate
         )
         self.content = content
+        self.onDelete = onDelete
     }
 }

@@ -16,6 +16,7 @@
 "are_you_sure_delete_vault" = "Are you sure to delete this vault ?";
 "add" = "Add";
 "error" = "Error";
+"warning" = "Warning";
 "name_empty" = "The name must not be empty";
 "password_empty" = "The password must not be empty";
 "category_empty" = "The category must not be empty";
@@ -50,3 +51,7 @@
 "underscore" = "Underscore";
 "hyphen" = "Hyphen";
 "spacing" = "Spacing";
+"delete" = "Delete";
+"are_you_sure_delete_entry" = "Are you sure to delete this entry ?";
+"are_you_sure_delete_category" = "Are you sure to delete this category ?";
+"cant_delete_category" = "Impossible to delete this category because the category is not empty";

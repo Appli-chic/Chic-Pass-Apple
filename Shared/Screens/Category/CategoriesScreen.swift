@@ -3,21 +3,27 @@
 //
 
 import SwiftUI
+import os
+import CoreData
 
 struct CategoriesScreen: View {
+    @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @EnvironmentObject var vaultData: VaultData
 
     @State private var isAddingCategory = false
+    @State private var isDeleteAlertOpen = false
+    @State private var isShowingErrorDelete = false
+    @State private var categoryToDelete: Category? = nil
     @State private var searchText: String = ""
 
     var body: some View {
-        SearchNavigation(text: $searchText, search: search, cancel: cancel) {
-            CategoryListByVault(filterValue: vaultData.vault!.id!.uuidString, search: searchText) { (category: Category) in
+        SearchNavigation(text: $searchText, search: {  }, cancel: {  }) {
+            CategoryListByVault(filterValue: vaultData.vault!.id!.uuidString, search: searchText,
+                    onDelete: askDeleteCategory) { (category: Category) in
                 CategoryItem(category: category)
             }
                     .listStyle(PlainListStyle())
-                    .resignKeyboardOnDragGesture()
                     .navigationBarTitle("categories")
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {
@@ -32,20 +38,64 @@ struct CategoriesScreen: View {
                             }
                         }
                     }
-                    .onTapGesture {
-                        hideKeyboard()
-                    }
         }
                 .sheet(isPresented: $isAddingCategory) {
                     NavigationView {
                         NewCategoryScreen()
                     }
                 }
+                .actionSheet(isPresented: $isDeleteAlertOpen) {
+                    ActionSheet(title: Text(categoryToDelete!.name!), message: Text("are_you_sure_delete_category"),
+                            buttons: [
+                                .destructive(Text("delete")) {
+                                    checkCanDeleteCategory()
+                                },
+                                .cancel()
+                            ]
+                    )
+                }
+                .alert(isPresented: $isShowingErrorDelete) {
+                    Alert(title: Text("warning"), message: Text("cant_delete_category"),
+                            dismissButton: .default(Text("ok")))
+                }
     }
 
-    func search() {
+    private func askDeleteCategory(category: Category) {
+        self.categoryToDelete = category
+        isDeleteAlertOpen.toggle()
     }
 
-    func cancel() {
+    private func checkCanDeleteCategory() {
+        do {
+            let fetchRequest = NSFetchRequest<Entry>()
+            fetchRequest.entity = Entry.entity()
+            fetchRequest.predicate = NSPredicate(format: "category.id == %@", categoryToDelete!.id!.uuidString)
+            let entries = try viewContext.fetch(fetchRequest)
+
+            if !entries.isEmpty {
+                isShowingErrorDelete.toggle()
+            } else {
+                deleteCategory()
+            }
+        } catch {
+            let nsError = error as NSError
+            let defaultLog = Logger()
+            defaultLog.error("Error retrieving entries: \(nsError)")
+            isShowingErrorDelete.toggle()
+        }
+    }
+
+    private func deleteCategory() {
+        withAnimation {
+            viewContext.delete(categoryToDelete!)
+
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                let defaultLog = Logger()
+                defaultLog.error("Error deleting an category: \(nsError)")
+            }
+        }
     }
 }

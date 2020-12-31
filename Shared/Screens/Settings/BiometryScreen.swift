@@ -5,8 +5,23 @@
 import SwiftUI
 
 struct BiometryScreen: View {
+    @EnvironmentObject var vaultData: VaultData
+
     @State private var isBiometryActivated = false
     @State private var isShowingBiometryCheck = false
+
+    func getBiometryFromPreference() {
+        let preferences = UserDefaults.standard
+        if preferences.object(forKey: biometryPasswordsKey) != nil {
+            let dictionary = preferences.dictionary(forKey: biometryPasswordsKey)
+
+            if dictionary != nil {
+                if dictionary!.index(forKey: vaultData.vault!.id!.uuidString) != nil {
+                    isBiometryActivated = true
+                }
+            }
+        }
+    }
 
     var body: some View {
         Form {
@@ -18,9 +33,12 @@ struct BiometryScreen: View {
                         } else {
                             isBiometryActivated = value
                             let preferences = UserDefaults.standard
-                            preferences.setValue(false, forKey: biometryKey)
-                            preferences.setValue("", forKey: biometryPasswordsKey)
-                            preferences.synchronize()
+
+                            if preferences.dictionary(forKey: biometryPasswordsKey) != nil {
+                                var data = preferences.dictionary(forKey: biometryPasswordsKey)! as! [String: String]
+                                data[vaultData.vault!.id!.uuidString] = nil
+                                preferences.synchronize()
+                            }
                         }
                     }
                 })) {
@@ -34,14 +52,23 @@ struct BiometryScreen: View {
                         BiometryCheckScreen(onPasswordChecked: onPasswordChecked)
                     }
                 }
+                .onAppear {
+                    getBiometryFromPreference()
+                }
     }
 
     private func onPasswordChecked(password: String) {
         isBiometryActivated = true
 
         let preferences = UserDefaults.standard
-        preferences.setValue(true, forKey: biometryKey)
-        preferences.setValue(password, forKey: biometryPasswordsKey)
+        var data = [String: String]()
+
+        if preferences.dictionary(forKey: biometryPasswordsKey) != nil {
+            data = preferences.dictionary(forKey: biometryPasswordsKey)! as! [String: String]
+        }
+
+        data[vaultData.vault!.id!.uuidString] = password
+        preferences.setValue(data, forKey: biometryPasswordsKey)
         preferences.synchronize()
     }
 }

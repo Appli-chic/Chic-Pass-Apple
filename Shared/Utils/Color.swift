@@ -5,6 +5,14 @@
 import SwiftUI
 
 extension Color {
+    var uiColor: UIColor { .init(self) }
+    typealias RGBA = (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
+
+    var rgba: RGBA? {
+        var (r,g,b,a): RGBA = (0,0,0,0)
+        return uiColor.getRed(&r, green: &g, blue: &b, alpha: &a) ? (r,g,b,a) : nil
+    }
+
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0
@@ -30,12 +38,20 @@ extension Color {
         )
     }
 
-    public func rgbToHex() -> String {
-        let r:CGFloat = cgColor!.components![0]
-        let g:CGFloat = cgColor!.components![1]
-        let b:CGFloat = cgColor!.components![2]
+    var hexaRGB: String? {
+        guard let rgba = rgba else { return nil }
+        return String(format: "#%02x%02x%02x",
+                Int(rgba.red*255),
+                Int(rgba.green*255),
+                Int(rgba.blue*255))
+    }
 
-        let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
-        return String(format: "#%06x", rgb)
+    var hexaRGBA: String? {
+        guard let rgba = rgba else { return nil }
+        return String(format: "#%02x%02x%02x%02x",
+                Int(rgba.red * 255),
+                Int(rgba.green * 255),
+                Int(rgba.blue * 255),
+                Int(rgba.alpha * 255))
     }
 }

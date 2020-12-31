@@ -17,7 +17,7 @@ struct EntryListByVault<T: Entry, Content: View>: View {
 
     var body: some View {
         List {
-            ForEach(fetchRequest.wrappedValue) { item in
+            ForEach(fetchRequest.wrappedValue, id: \.id) { item in
                 self.content(item)
             }
                     .onDelete(perform: { offsets in

@@ -4,7 +4,6 @@
 
 import CryptoSwift
 
-let biometryKey = "biometryKey"
 let biometryPasswordsKey = "biometryPasswordsKey"
 
 enum SecurityError: Error {
@@ -23,7 +22,7 @@ class Security {
 
     static func encryptData(key: String, data: String, reloadAes: Bool) throws -> String {
         let secret: Array<UInt8> = Array(key.utf8)
-        let aes = try getAESInstance(secret: secret, reloadAes: false)
+        let aes = try getAESInstance(secret: secret, reloadAes: reloadAes)
 
         /* Encrypt Data */
         let inputData = data.data(using: .utf8)

@@ -20,11 +20,11 @@ struct PasswordUnlockScreen: View {
     private func checkBiometrics() {
         if !vaultData.isMainScreenActive {
             let preferences = UserDefaults.standard
-            if preferences.object(forKey: biometryKey) != nil {
-                let isActive = preferences.bool(forKey: biometryKey)
+            if preferences.dictionary(forKey: biometryPasswordsKey) != nil {
+                let dictionary = preferences.dictionary(forKey: biometryPasswordsKey)!
 
-                if isActive {
-                    let password = preferences.string(forKey: biometryPasswordsKey)!
+                if dictionary[vault.id!.uuidString] != nil {
+                    let password = dictionary[vault.id!.uuidString] as! String
                     unlockThroughMetrics(passwordSaved: password)
                 }
             }

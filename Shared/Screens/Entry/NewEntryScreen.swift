@@ -67,8 +67,8 @@ struct NewEntryScreen: View {
 
                     Section(header: Text("category")) {
                         Picker("category", selection: $selectedCategoryIndex) {
-                            ForEach(0..<categories.count) {
-                                Text(categories[$0].name!)
+                            ForEach(Array(categories.enumerated()), id: \.offset) { index, category in
+                                Text(category.name!)
                             }
                         }
                     }

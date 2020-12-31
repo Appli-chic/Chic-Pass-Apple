@@ -16,7 +16,7 @@ struct EntriesScreen: View {
     var body: some View {
         SearchNavigation(text: $searchText, search: search, cancel: cancel) {
             VStack {
-                NavigationLink(destination: EntryDetail(entry: $currentEntry), isActive: $isShowingEntryDetail) {
+                NavigationLink(destination: EntryDetail(vaultData: vaultData, entry: $currentEntry), isActive: $isShowingEntryDetail) {
                     EmptyView()
                 }
 

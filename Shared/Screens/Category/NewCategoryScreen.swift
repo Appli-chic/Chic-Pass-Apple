@@ -78,7 +78,7 @@ struct NewCategoryScreen: View {
                     let newCategory = Category(context: viewContext)
                     newCategory.id = UUID.init()
                     newCategory.name = name.firstUppercased
-                    newCategory.color = UIColor(color).toHex!
+                    newCategory.color = color.rgbToHex()
                     newCategory.icon = selectedIcon.icon
                     newCategory.createdAt = Date()
                     newCategory.updatedAt = Date()

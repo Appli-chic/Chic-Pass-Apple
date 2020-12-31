@@ -11,7 +11,7 @@ struct CategoryItem: View {
         HStack {
             ZStack {
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color(UIColor(hex: category.color!)!))
+                    .fill(Color(hex: category.color!))
                         .frame(width: 40, height: 40)
 
                 Image(systemName: category.icon!)

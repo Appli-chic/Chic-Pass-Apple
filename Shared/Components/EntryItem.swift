@@ -11,7 +11,7 @@ struct EntryItem: View {
         HStack {
             ZStack {
                 RoundedRectangle(cornerRadius: 8)
-                        .fill(Color(UIColor(hex: entry.category!.color!)!))
+                        .fill(Color(hex: entry.category!.color!))
                         .frame(width: 40, height: 40)
 
                 Image(systemName: entry.category!.icon!)

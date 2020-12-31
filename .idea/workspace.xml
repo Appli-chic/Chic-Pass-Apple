@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Shared/Utils/Color.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Components/Lists/CategoryListByVault.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/Lists/CategoryListByVault.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Components/Lists/EntrylistByVault.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/Lists/EntrylistByVault.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Category/CategoriesScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Category/CategoriesScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Entry/EntriesScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Entry/EntriesScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Entry/EntryDetail.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Entry/EntryDetail.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/VaultsScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/VaultsScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Utils/UIColor.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Utils/UIColor.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Components/CategoryItem.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/CategoryItem.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Components/EntryItem.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/EntryItem.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Category/NewCategoryScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Category/NewCategoryScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Utils/UIColor.swift" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +83,7 @@
       <workItem from="1609323156954" duration="15107000" />
       <workItem from="1609349532204" duration="9828000" />
       <workItem from="1609399011104" duration="1606000" />
-      <workItem from="1609405670042" duration="5514000" />
+      <workItem from="1609405670042" duration="6371000" />
     </task>
     <task id="LOCAL-00001" summary="Adding vault and security.">
       <created>1609237179479</created>
@@ -173,16 +170,5 @@
     <MESSAGE value="Adding search bar." />
     <MESSAGE value="Filtering categories." />
     <option name="LAST_COMMIT_MESSAGE" value="Filtering categories." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Shared/Screens/Category/CategoriesScreen.swift</url>
-          <line>72</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

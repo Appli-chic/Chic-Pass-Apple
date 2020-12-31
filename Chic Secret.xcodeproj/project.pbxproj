@@ -63,10 +63,10 @@
 		BDDB956F2952657512F35127 /* IconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB937F2A72471879A9312E /* IconPicker.swift */; };
 		BDDB961C6ECE18757A0E552C /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9EFBC977B7158A1F52F6 /* CategoryItem.swift */; };
 		BDDB9672117B1ED57B68C12D /* PasswordUnlockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */; };
-		BDDB969E8726A55CCEA3A947 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9D3FC36D1C4B9A6FFEC2 /* UIColor.swift */; };
+		BDDB969E8726A55CCEA3A947 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9D3FC36D1C4B9A6FFEC2 /* Color.swift */; };
 		BDDB971B267F802AED9495F0 /* CategoryListByVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB92BE18EB43BDB0A3BE24 /* CategoryListByVault.swift */; };
 		BDDB977CE572BED3C8F19EC4 /* ColorPickerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9E5350843890673F1A12 /* ColorPickerItem.swift */; };
-		BDDB97A5D4A18A8BEFBF81E9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9D3FC36D1C4B9A6FFEC2 /* UIColor.swift */; };
+		BDDB97A5D4A18A8BEFBF81E9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9D3FC36D1C4B9A6FFEC2 /* Color.swift */; };
 		BDDB97BD53E2DEF9E32B8ADC /* MbModalHackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9EC8F1639E4FE2C32E7C /* MbModalHackView.swift */; };
 		BDDB97F5F1AF39388F3C267F /* EntryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB962EB8EB6E990F65C9AF /* EntryItem.swift */; };
 		BDDB983277AA7508D578789E /* CategoryListByVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB92BE18EB43BDB0A3BE24 /* CategoryListByVault.swift */; };
@@ -143,7 +143,7 @@
 		BDDB9C081524B904735A10E3 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		BDDB9C4331F814968C9864FD /* NewCategoryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryScreen.swift; sourceTree = "<group>"; };
 		BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordUnlockScreen.swift; sourceTree = "<group>"; };
-		BDDB9D3FC36D1C4B9A6FFEC2 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		BDDB9D3FC36D1C4B9A6FFEC2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		BDDB9E4F2AD6BE723F5C16C9 /* SettingsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		BDDB9E5350843890673F1A12 /* ColorPickerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerItem.swift; sourceTree = "<group>"; };
 		BDDB9E6D916DF926AF183ADB /* NewEntryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEntryScreen.swift; sourceTree = "<group>"; };
@@ -309,7 +309,7 @@
 			children = (
 				836D3400119DCEC33B19D605 /* KeyboardManagement.swift */,
 				BDDB909AF57ADDC244E9C018 /* Security.swift */,
-				BDDB9D3FC36D1C4B9A6FFEC2 /* UIColor.swift */,
+				BDDB9D3FC36D1C4B9A6FFEC2 /* Color.swift */,
 				BDDB9C064B44677C0B8D1CCC /* StringProtocol.swift */,
 			);
 			path = Utils;
@@ -642,7 +642,7 @@
 				BDDB9F191736720E1BC54DB0 /* EntriesScreen.swift in Sources */,
 				BDDB92651CEB3BBC4725ABB1 /* CategoriesScreen.swift in Sources */,
 				BDDB961C6ECE18757A0E552C /* CategoryItem.swift in Sources */,
-				BDDB969E8726A55CCEA3A947 /* UIColor.swift in Sources */,
+				BDDB969E8726A55CCEA3A947 /* Color.swift in Sources */,
 				BDDB9D9C2072326FE4A9288C /* StringProtocol.swift in Sources */,
 				BDDB94544732D9F312C092E9 /* NewCategoryScreen.swift in Sources */,
 				BDDB9251B5AA71B4200ABF5C /* IconPicker.swift in Sources */,
@@ -681,7 +681,7 @@
 				BDDB9E0978B099EC04BE26CB /* EntriesScreen.swift in Sources */,
 				BDDB9439565FBE7335A5182D /* CategoriesScreen.swift in Sources */,
 				BDDB9AFEEA36B4AAB08C830C /* CategoryItem.swift in Sources */,
-				BDDB97A5D4A18A8BEFBF81E9 /* UIColor.swift in Sources */,
+				BDDB97A5D4A18A8BEFBF81E9 /* Color.swift in Sources */,
 				BDDB920F4A0E7E57792EC432 /* StringProtocol.swift in Sources */,
 				BDDB92C6E2CDEBAE033E01FD /* NewCategoryScreen.swift in Sources */,
 				BDDB956F2952657512F35127 /* IconPicker.swift in Sources */,

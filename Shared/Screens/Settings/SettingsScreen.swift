@@ -10,7 +10,17 @@ struct SettingsScreen: View {
     var body: some View {
         NavigationView {
             Form {
+                Section {
+                    NavigationLink(destination: EmptyView()) {
+                        Text("login_signup")
+                    }
+                }
 
+                Section {
+                    NavigationLink(destination: BiometryScreen()) {
+                        Text("biometry")
+                    }
+                }
             }
                     .navigationBarTitle("settings")
                     .toolbar {

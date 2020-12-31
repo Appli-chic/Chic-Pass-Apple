@@ -56,3 +56,5 @@
 "are_you_sure_delete_entry" = "Êtes-vous sûr de vouloir supprimer ce mot de passe ?";
 "are_you_sure_delete_category" = "Êtes-vous sûr de vouloir supprimer cette catégorie ?";
 "cant_delete_category" = "Impossible de supprimer cette catégorie car elle contient encore des mots de passe";
+"biometry" = "Biométrie";
+"login_signup" = "Se connecter/S'inscrire";

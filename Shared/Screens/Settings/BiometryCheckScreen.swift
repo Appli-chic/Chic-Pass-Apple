@@ -1,64 +1,20 @@
 //
-// Created by Lazyos on 29/12/2020.
+// Created by Lazyos on 31/12/2020.
 //
 
 import SwiftUI
 import os
-import LocalAuthentication
 
-struct PasswordUnlockScreen: View {
+struct BiometryCheckScreen: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @EnvironmentObject var vaultData: VaultData
 
     @State private var password = ""
     @State private var hasError = false
     @State private var isLoading = false
-    @State var focused: [Bool] = [true]
+    @State private var focused: [Bool] = [true]
 
-    @Binding var vault: Vault
-
-    private func checkBiometrics() {
-        if !vaultData.isMainScreenActive {
-            let preferences = UserDefaults.standard
-            if preferences.object(forKey: biometryKey) != nil {
-                let isActive = preferences.bool(forKey: biometryKey)
-
-                if isActive {
-                    let password = preferences.string(forKey: biometryPasswordsKey)!
-                    unlockThroughMetrics(passwordSaved: password)
-                }
-            }
-        }
-    }
-
-    private func unlockThroughMetrics(passwordSaved: String) {
-        isLoading = true
-
-        let context = LAContext()
-        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Unlock your vault") { success, error in
-            if success {
-                do {
-                    let signature = try Security.decryptData(key: passwordSaved, data: vault.signature!, reloadAes: true)
-
-                    if signature == Security.signature {
-                        DispatchQueue.main.async {
-                            vaultData.isMainScreenActive.toggle()
-                            vaultData.vault = vault
-                            vaultData.password = password
-                            isLoading = false
-                            mode.wrappedValue.dismiss()
-                        }
-                    }
-                } catch {
-                    let nsError = error as NSError
-                    let defaultLog = Logger()
-                    defaultLog.error("Error decrypting the password: \(nsError)")
-
-                    isLoading = false
-                }
-            }
-        }
-    }
+    public var onPasswordChecked: (String) -> Void
 
     var body: some View {
         LoadingView(isShowing: $isLoading) {
@@ -107,9 +63,6 @@ struct PasswordUnlockScreen: View {
                     !isLoading
                 }
                 .animation(.none)
-                .onAppear {
-                    checkBiometrics()
-                }
     }
 
     private func checkPassword() {
@@ -120,14 +73,12 @@ struct PasswordUnlockScreen: View {
 
         DispatchQueue.global().async {
             do {
-                let signature = try Security.decryptData(key: password, data: vault.signature!, reloadAes: true)
+                let signature = try Security.decryptData(key: password, data: vaultData.vault!.signature!, reloadAes: false)
 
                 if signature == Security.signature {
                     DispatchQueue.main.async {
-                        vaultData.isMainScreenActive = true
-                        vaultData.vault = vault
-                        vaultData.password = password
                         isLoading = false
+                        onPasswordChecked(password)
                         mode.wrappedValue.dismiss()
                     }
                 } else {

@@ -4,6 +4,9 @@
 
 import CryptoSwift
 
+let biometryKey = "biometryKey"
+let biometryPasswordsKey = "biometryPasswordsKey"
+
 enum SecurityError: Error {
     case DecryptError
 }

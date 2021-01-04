@@ -22,10 +22,22 @@ struct NewVaultScreen: View {
     @State var focused: [Bool] = [true, false, false]
 
     var body: some View {
-
+        #if os(iOS)
+        displayContent()
+            .navigationBarTitleDisplayMode(.inline)
+            .allowAutoDismiss {
+                !isLoading
+            }
+        #else
+        displayContent()
+        #endif
+    }
+    
+    private func displayContent() -> some View {
         LoadingView(isShowing: $isLoading) {
             Form {
                 Section(footer: Text("explanation_master_password")) {
+                    #if os(iOS)
                     TextFieldTyped(keyboardType: .default, returnVal: .next, tag: 0,
                             placeholder: NSLocalizedString("name", comment: "name"),
                             isSecureTextEntry: false, capitalization: .sentences, text: $name, isFocusable: self.$focused)
@@ -35,10 +47,15 @@ struct NewVaultScreen: View {
 
                     PasswordField(label: "verify_password", keyboardType: .default, returnVal: .done, tag: 2,
                             isCheckingPasswordStrength: false, isFocusable: self.$focused, password: $passwordCheck)
+                    #else
+                    TextField("name", text: $name)
+                    SecureField("password", text: $password)
+                    SecureField("verify_password", text: $passwordCheck)
+                    #endif
                 }
             }
         }
-                .navigationBarTitle("new_vault", displayMode: .inline)
+                .navigationTitle("new_vault")
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button(action: { mode.wrappedValue.dismiss() }) {
@@ -60,9 +77,6 @@ struct NewVaultScreen: View {
                     #if os(iOS)
                     hideKeyboard()
                     #endif
-                }
-                .allowAutoDismiss {
-                    !isLoading
                 }
     }
 

@@ -4,6 +4,11 @@
 
 import SwiftUI
 
+#if os(macOS)
+import AppKit
+#endif
+
+
 class IconData: Identifiable, Equatable {
     var icon: String = ""
 
@@ -108,15 +113,7 @@ struct IconPicker: View {
                                         .frame(width: 35, height: 35)
                             }
 
-                            Image(systemName: item.icon)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .foregroundColor(item == selectedIcon ? Color.white : Color(UIColor.label))
-                                    .frame(width: 25, height: 25)
-                                    .padding(10)
-                                    .onTapGesture {
-                                        selectedIcon = item
-                                    }
+                            displayIcon(item: item)
                         }
                     }
                 }
@@ -133,6 +130,30 @@ struct IconPicker: View {
                         }
             }
         }
+    }
+    
+    private func displayIcon(item: IconData) -> some View {
+        #if os(macOS)
+        return Image(systemName: item.icon)
+                .resizable()
+                .scaledToFit()
+                .foregroundColor(item == selectedIcon ? Color.white : Color(NSColor.labelColor))
+                .frame(width: 25, height: 25)
+                .padding(10)
+                .onTapGesture {
+                    selectedIcon = item
+                }
+        #else
+        return Image(systemName: item.icon)
+                .resizable()
+                .scaledToFit()
+                .foregroundColor(item == selectedIcon ? Color.white : Color(UIColor.label))
+                .frame(width: 25, height: 25)
+                .padding(10)
+                .onTapGesture {
+                    selectedIcon = item
+                }
+        #endif
     }
 }
 

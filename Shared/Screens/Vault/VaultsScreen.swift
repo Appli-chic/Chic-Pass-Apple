@@ -26,56 +26,77 @@ struct VaultsScreen: View {
 
     var body: some View {
         NavigationView {
-            ZStack {
-
-                if UIDevice.current.userInterfaceIdiom == .phone {
-                    NavigationLink(destination: MainScreen(),
-                            isActive: $vaultData.isMainScreenActive) {
-                        EmptyView()
-                    }
+            
+            #if os(iOS)
+            displayContent()
+                .actionSheet(isPresented: $isDeleteAlertOpen) {
+                    ActionSheet(title: Text(""), message: Text("are_you_sure_delete_vault"),
+                            buttons: [
+                                .destructive(Text("delete")) {
+                                    deleteVault(offsets: offsets!)
+                                },
+                                .cancel()
+                            ]
+                    )
                 }
+            #else
+            displayContent()
+                .alert(isPresented: $isDeleteAlertOpen) {() -> Alert in
+                    Alert(title: Text(""), message: Text("are_you_sure_delete_vault"), primaryButton: .destructive(Text("delete")) {
+                        deleteVault(offsets: offsets!)
+                    },
+                          secondaryButton: .cancel(Text("cancel")))
+                    
+                    
+                }
+            #endif
 
-                displayingVaults()
-            }
-                    .navigationBarTitle("vaults", displayMode: .large)
-                    .toolbar {
-                        ToolbarItem(placement: .navigation) {
-                            #if os(macOS)
-                            Button(action: toggleSidebar, label: {
-                                Image(systemName: "sidebar.left")
-                            })
-                            #endif
-                        }
-
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button(action: { showingNewVaultScreen.toggle() }) {
-                                Label("Add vault", systemImage: "plus")
-                            }
-                        }
-                    }
-                    .sheet(isPresented: $showingNewVaultScreen) {
-                        NavigationView<NewVaultScreen> {
-                            NewVaultScreen()
-                        }
-                    }
-                    .actionSheet(isPresented: $isDeleteAlertOpen) {
-                        ActionSheet(title: Text(""), message: Text("are_you_sure_delete_vault"),
-                                buttons: [
-                                    .destructive(Text("delete")) {
-                                        deleteVault(offsets: offsets!)
-                                    },
-                                    .cancel()
-                                ]
-                        )
-                    }
-
+            #if os(iOS)
             if UIDevice.current.userInterfaceIdiom == .pad {
                 NavigationLink(destination: MainScreen(),
                         isActive: $vaultData.isMainScreenActive) {
                     EmptyView()
                 }
             }
+            #endif
         }
+    }
+    
+    private func displayContent() -> some View {
+        ZStack {
+
+            #if os(iOS)
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                NavigationLink(destination: MainScreen(),
+                        isActive: $vaultData.isMainScreenActive) {
+                    EmptyView()
+                }
+            }
+            #endif
+
+            displayingVaults()
+        }
+                .navigationTitle("vaults")
+                .toolbar {
+                    ToolbarItem(placement: .navigation) {
+                        #if os(macOS)
+                        Button(action: toggleSidebar, label: {
+                            Image(systemName: "sidebar.left")
+                        })
+                        #endif
+                    }
+
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button(action: { showingNewVaultScreen.toggle() }) {
+                            Label("Add vault", systemImage: "plus")
+                        }
+                    }
+                }
+                .sheet(isPresented: $showingNewVaultScreen) {
+                    NavigationView<NewVaultScreen> {
+                        NewVaultScreen()
+                    }
+                }
     }
 
     private func toggleSidebar() {
@@ -85,6 +106,16 @@ struct VaultsScreen: View {
     }
 
     private func displayingVaults() -> some View {
+        #if os(iOS)
+        return displayVaultList()
+            .listStyle(InsetGroupedListStyle())
+        #else
+        return displayVaultList()
+            .listStyle(SidebarListStyle())
+        #endif
+    }
+    
+    private func displayVaultList() -> some View {
         List {
             ForEach(vaults) { vault in
                 VaultItem(vault: vault)
@@ -101,8 +132,6 @@ struct VaultsScreen: View {
             }
                     .onDelete(perform: askDeleteVault)
         }
-                .listStyle(InsetGroupedListStyle())
-//                        .listStyle(SidebarListStyle())
     }
 
     private func askDeleteVault(offsets: IndexSet) {

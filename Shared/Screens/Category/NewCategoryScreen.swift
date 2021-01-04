@@ -26,6 +26,15 @@ struct NewCategoryScreen: View {
     }
 
     var body: some View {
+        #if os(iOS)
+        displayContent()
+            .navigationBarTitleDisplayMode(.inline)
+        #else
+        displayContent()
+        #endif
+    }
+    
+    private func displayContent() -> some View {
         LoadingView(isShowing: $isLoading) {
             ZStack {
                 Form {
@@ -40,16 +49,15 @@ struct NewCategoryScreen: View {
                 }
             }
         }
-                .navigationBarTitle("new_category")
-                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("new_category")
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem(placement: .cancellationAction) {
                         Button(action: { mode.wrappedValue.dismiss() }) {
                             Text("cancel")
                         }.disabled(isLoading)
                     }
 
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem(placement: .confirmationAction) {
                         Button(action: addCategory) {
                             Text("add")
                         }.disabled(isLoading)

@@ -2,9 +2,9 @@
 // Created by Lazyos on 29/12/2020.
 //
 
-#if os(iOS)
 import SwiftUI
 
+#if os(iOS)
 struct MbModalHackView: UIViewControllerRepresentable {
     var dismissable: () -> Bool = { false }
 
@@ -70,6 +70,18 @@ extension View {
     public func allowAutoDismiss(_ dismissable: Bool) -> some View {
         self
                 .background(MbModalHackView(dismissable: { dismissable }))
+    }
+}
+#else
+extension View {
+    /// Control if allow to dismiss the sheet by the user actions
+    public func allowAutoDismiss(_ dismissable: @escaping () -> Bool) -> some View {
+        return self
+    }
+
+    /// Control if allow to dismiss the sheet by the user actions
+    public func allowAutoDismiss(_ dismissable: Bool) -> some View {
+        return self
     }
 }
 #endif

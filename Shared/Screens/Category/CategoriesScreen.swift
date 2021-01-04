@@ -18,21 +18,47 @@ struct CategoriesScreen: View {
     @State private var searchText: String = ""
 
     var body: some View {
+        #if os(iOS)
+        return displayContent()
+            .actionSheet(isPresented: $isDeleteAlertOpen) {
+                ActionSheet(title: Text(categoryToDelete!.name!), message: Text("are_you_sure_delete_category"),
+                        buttons: [
+                            .destructive(Text("delete")) {
+                                checkCanDeleteCategory()
+                            },
+                            .cancel()
+                        ]
+                )
+            }
+        #else
+        return displayContent()
+            .alert(isPresented: $isDeleteAlertOpen) {() -> Alert in
+                Alert(title: Text(categoryToDelete!.name!), message: Text("are_you_sure_delete_category"), primaryButton: .destructive(Text("delete")) {
+                    checkCanDeleteCategory()
+                },
+                      secondaryButton: .cancel(Text("cancel")))
+                
+                
+            }
+        #endif
+    }
+    
+    private func displayContent() -> some View {
         SearchNavigation(text: $searchText, search: {  }, cancel: {  }) {
             CategoryListByVault(filterValue: vaultData.vault!.id!.uuidString, search: searchText,
                     onDelete: askDeleteCategory) { (category: Category) in
                 CategoryItem(category: category)
             }
                     .listStyle(PlainListStyle())
-                    .navigationBarTitle("categories")
+                    .navigationTitle("categories")
                     .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
+                        ToolbarItem(placement: .cancellationAction) {
                             Button(action: { mode.wrappedValue.dismiss() }) {
                                 Label("", systemImage: "chevron.backward")
                             }
                         }
 
-                        ToolbarItem(placement: .navigationBarTrailing) {
+                        ToolbarItem(placement: .confirmationAction) {
                             Button(action: { isAddingCategory.toggle() }) {
                                 Label("", systemImage: "plus")
                             }
@@ -43,16 +69,6 @@ struct CategoriesScreen: View {
                     NavigationView {
                         NewCategoryScreen()
                     }
-                }
-                .actionSheet(isPresented: $isDeleteAlertOpen) {
-                    ActionSheet(title: Text(categoryToDelete!.name!), message: Text("are_you_sure_delete_category"),
-                            buttons: [
-                                .destructive(Text("delete")) {
-                                    checkCanDeleteCategory()
-                                },
-                                .cancel()
-                            ]
-                    )
                 }
                 .alert(isPresented: $isShowingErrorDelete) {
                     Alert(title: Text("warning"), message: Text("cant_delete_category"),

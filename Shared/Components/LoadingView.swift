@@ -4,6 +4,10 @@
 
 import SwiftUI
 
+#if os(macOS)
+import AppKit
+#endif
+
 struct LoadingView<Content>: View where Content: View {
 
     @Binding var isShowing: Bool
@@ -17,18 +21,40 @@ struct LoadingView<Content>: View where Content: View {
                         .blur(radius: isShowing ? 2 : 0)
 
                 if isShowing {
-                    Rectangle()
-                            .fill(Color(UIColor.systemBackground)).opacity(isShowing ? 0.6 : 0)
-                            .edgesIgnoringSafeArea(.all)
+                    displayLoadingBackground()
 
-                    ProgressView()
-                            .scaleEffect(2.0, anchor: .center)
-                            .frame(width: 100, height: 100)
-                            .background(Color(UIColor.secondarySystemBackground))
-                            .foregroundColor(Color.primary)
-                            .cornerRadius(12)
+                    displayLoading()
                 }
             }
         }
+    }
+    
+    private func displayLoadingBackground() -> some View {
+        #if os(macOS)
+        return Rectangle()
+            .fill(Color(NSColor.windowBackgroundColor)).opacity(isShowing ? 0.6 : 0)
+        #else
+        return Rectangle()
+                .fill(Color(UIColor.systemBackground)).opacity(isShowing ? 0.6 : 0)
+                .edgesIgnoringSafeArea(.all)
+        #endif
+    }
+    
+    private func displayLoading() -> some View {
+        #if os(macOS)
+        return ProgressView()
+            .scaleEffect(2.0, anchor: .center)
+            .frame(width: 100, height: 100)
+            .background(Color(NSColor.controlBackgroundColor))
+            .foregroundColor(Color.primary)
+            .cornerRadius(12)
+        #else
+        return ProgressView()
+            .scaleEffect(2.0, anchor: .center)
+            .frame(width: 100, height: 100)
+            .background(Color(UIColor.secondarySystemBackground))
+            .foregroundColor(Color.primary)
+            .cornerRadius(12)
+        #endif
     }
 }

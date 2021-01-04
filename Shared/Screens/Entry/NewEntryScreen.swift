@@ -39,6 +39,15 @@ struct NewEntryScreen: View {
     }
 
     var body: some View {
+        #if os(iOS)
+        displayContent()
+            .navigationBarTitleDisplayMode(.inline)
+        #else
+        displayContent()
+        #endif
+    }
+    
+    private func displayContent() -> some View {
         LoadingView(isShowing: $isLoading) {
             ZStack {
                 NavigationLink(destination: GeneratePasswordScreen(password: $password), isActive: $isGeneratingPassword) {
@@ -47,6 +56,7 @@ struct NewEntryScreen: View {
 
                 Form {
                     Section {
+                        #if os(iOS)
                         TextFieldTyped(keyboardType: .default, returnVal: .next, tag: 0,
                                 placeholder: NSLocalizedString("name", comment: "name"),
                                 isSecureTextEntry: false, capitalization: .sentences, text: $name, isFocusable: self.$focused)
@@ -57,6 +67,11 @@ struct NewEntryScreen: View {
 
                         PasswordField(label: "password", keyboardType: .default, returnVal: .done, tag: 2,
                                 isCheckingPasswordStrength: false, isFocusable: self.$focused, password: $password)
+                        #else
+                        TextField("name", text: $name)
+                        TextField("username_email", text: $username)
+                        SecureField("password", text: $password)
+                        #endif
 
                         Button(action: { isGeneratingPassword.toggle() }) {
                             HStack {
@@ -82,19 +97,20 @@ struct NewEntryScreen: View {
                 }
             }
         }
-                .navigationBarTitle("new_password")
-                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("new_password")
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem(placement: .cancellationAction) {
                         Button(action: {
+                            #if os(iOS)
                             hideKeyboard()
+                            #endif
                             mode.wrappedValue.dismiss()
                         }) {
                             Text("cancel")
                         }.disabled(isLoading)
                     }
 
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem(placement: .confirmationAction) {
                         Button(action: addEntry) {
                             Text("add")
                         }.disabled(isLoading)

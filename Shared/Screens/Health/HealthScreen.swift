@@ -12,9 +12,9 @@ struct HealthScreen: View {
             Form {
 
             }
-                    .navigationBarTitle("health")
+                    .navigationTitle("health")
                     .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
+                        ToolbarItem(placement: .cancellationAction) {
                             Button(action: { mode.wrappedValue.dismiss() }) {
                                 Label("", systemImage: "chevron.backward")
                             }

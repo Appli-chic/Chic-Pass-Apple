@@ -27,17 +27,21 @@ struct GeneratePasswordScreen: View {
         Form {
             Section(header: Text("password")) {
                 GeometryReader { geometry in
+                    #if os(iOS)
                     PasswordAttributed(text: password, width: geometry.size.width, dynamicHeight: $height) {
                         $0.attributedText = PasswordAttributed.colorizePassword(password: password, isSecure: false)
                     }.frame(minHeight: height)
+                    #else
+                    SecureField("", text: $password).frame(minHeight: height)
+                    #endif
                 }
                         .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
                         .frame(minHeight: height + 16)
 
-                Text(PasswordField.getGeneratedPasswordText(password: password))
+                Text(getGeneratedPasswordText(password: password))
                         .bold()
-                        .foregroundColor(Color(.white))
-                        .listRowBackground(PasswordField.getGeneratedPasswordColor(password: password))
+                        .foregroundColor(.white)
+                        .listRowBackground(getGeneratedPasswordColor(password: password))
             }
 
             Section {
@@ -103,9 +107,9 @@ struct GeneratePasswordScreen: View {
                 .onAppear {
                     generatePassword()
                 }
-                .navigationBarTitle("generate_password")
+                .navigationTitle("generate_password")
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem(placement: .cancellationAction) {
                         Button(action: { mode.wrappedValue.dismiss() }) {
                             Text("ok")
                         }

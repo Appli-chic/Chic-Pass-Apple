@@ -4,13 +4,27 @@
 
 import SwiftUI
 
+#if os(macOS)
+import AppKit
+#endif
+
 extension Color {
+    #if os(iOS)
     var uiColor: UIColor { .init(self) }
+    #else
+    var nsColor: NSColor { .init(self) }
+    #endif
+    
     typealias RGBA = (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
 
     var rgba: RGBA? {
         var (r,g,b,a): RGBA = (0,0,0,0)
+        
+        #if os(iOS)
         return uiColor.getRed(&r, green: &g, blue: &b, alpha: &a) ? (r,g,b,a) : nil
+        #else
+        return (r,g,b,a)
+        #endif
     }
 
     init(hex: String) {

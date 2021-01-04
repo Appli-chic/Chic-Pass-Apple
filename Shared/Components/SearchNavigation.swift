@@ -2,9 +2,9 @@
 // Created by Lazyos on 30/12/2020.
 //
 
-#if os(iOS)
 import SwiftUI
 
+#if os(iOS)
 struct SearchNavigation<Content: View>: UIViewControllerRepresentable {
     @Binding var text: String
     var search: () -> Void
@@ -65,6 +65,16 @@ struct SearchNavigation<Content: View>: UIViewControllerRepresentable {
             cancel()
         }
     }
+}
+#else
+struct SearchNavigation<Content>: View where Content : View {
+    @Binding var text: String
+    var search: () -> Void
+    var cancel: () -> Void
+    var content: () -> Content
 
+    var body: some View {
+        self.content()
+    }
 }
 #endif

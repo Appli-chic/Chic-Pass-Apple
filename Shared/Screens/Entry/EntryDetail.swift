@@ -33,12 +33,40 @@ struct EntryDetail: View {
     }
 
     var body: some View {
+        #if os(iOS)
+        return displayContent()
+            .navigationBarTitleDisplayMode(.inline)
+            .actionSheet(isPresented: $isDeleteAlertOpen) {
+                ActionSheet(title: Text(entry!.name!), message: Text("are_you_sure_delete_entry"),
+                        buttons: [
+                            .destructive(Text("delete")) {
+                                deleteEntry()
+                            },
+                            .cancel()
+                        ]
+                )
+            }
+        #else
+        return displayContent()
+            .alert(isPresented: $isDeleteAlertOpen) {() -> Alert in
+                Alert(title: Text(entry!.name!), message: Text("are_you_sure_delete_entry"), primaryButton: .destructive(Text("delete")) {
+                    deleteEntry()
+                },
+                      secondaryButton: .cancel(Text("cancel")))
+                
+                
+            }
+        #endif
+    }
+    
+    private func displayContent() -> some View {
         Form {
             Section {
                 Text(entry?.username ?? "")
 
                 HStack {
                     GeometryReader { geometry in
+                        #if os(iOS)
                         PasswordAttributed(text: password, width: geometry.size.width, dynamicHeight: $height) {
                             if !isHidden {
                                 $0.attributedText = PasswordAttributed.colorizePassword(password: password, isSecure: false)
@@ -48,6 +76,9 @@ struct EntryDetail: View {
                                 $0.attributedText = attributedPassword
                             }
                         }.frame(minHeight: height)
+                        #else
+                        Text(password)
+                        #endif
                     }
                             .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
                             .frame(minHeight: height + 16)
@@ -74,17 +105,6 @@ struct EntryDetail: View {
             }
         }
                 .navigationTitle(entry?.name ?? "")
-                .navigationBarTitleDisplayMode(.inline)
-                .actionSheet(isPresented: $isDeleteAlertOpen) {
-                    ActionSheet(title: Text(entry!.name!), message: Text("are_you_sure_delete_entry"),
-                            buttons: [
-                                .destructive(Text("delete")) {
-                                    deleteEntry()
-                                },
-                                .cancel()
-                            ]
-                    )
-                }
     }
 
     private func deleteEntry() {

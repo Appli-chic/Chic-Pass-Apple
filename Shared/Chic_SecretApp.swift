@@ -15,8 +15,6 @@ class VaultData: ObservableObject {
 
 @main
 struct Chic_SecretApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-
     let persistenceController = PersistenceController.shared
     var vaultData = VaultData()
 

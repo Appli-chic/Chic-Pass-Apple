@@ -22,9 +22,9 @@ struct SettingsScreen: View {
                     }
                 }
             }
-                    .navigationBarTitle("settings")
+                    .navigationTitle("settings")
                     .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
+                        ToolbarItem(placement: .cancellationAction) {
                             Button(action: { mode.wrappedValue.dismiss() }) {
                                 Label("", systemImage: "chevron.backward")
                             }
@@ -32,4 +32,5 @@ struct SettingsScreen: View {
                     }
         }
     }
+    
 }

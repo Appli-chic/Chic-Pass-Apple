@@ -61,6 +61,19 @@ struct PasswordUnlockScreen: View {
     }
 
     var body: some View {
+        #if os(iOS)
+        displayContent()
+            .navigationBarTitleDisplayMode(.inline)
+            .allowAutoDismiss {
+                !isLoading
+            }
+            .animation(.none)
+        #else
+        displayContent()
+        #endif
+    }
+    
+    private func displayContent() -> some View {
         LoadingView(isShowing: $isLoading) {
             VStack {
                 Image(systemName: "lock.fill")
@@ -72,14 +85,18 @@ struct PasswordUnlockScreen: View {
 
                 Form {
                     Section(header: Text("unlock_vault")) {
+                        #if os(iOS)
                         PasswordField(label: "password", keyboardType: .default, returnVal: .done, tag: 0,
                                 isCheckingPasswordStrength: false, isFocusable: self.$focused, password: $password)
+                        #else
+                        SecureField("password", text: $password)
+                        #endif
                     }
                 }
             }
         }
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem(placement: .cancellationAction) {
                         Button(action: {
                             mode.wrappedValue.dismiss()
                         }) {
@@ -88,7 +105,7 @@ struct PasswordUnlockScreen: View {
                                 .disabled(isLoading)
                     }
 
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem(placement: .confirmationAction) {
                         Button(action: { checkPassword() }) {
                             Text("unlock")
                         }
@@ -98,17 +115,12 @@ struct PasswordUnlockScreen: View {
                 .alert(isPresented: $hasError) { () -> Alert in
                     Alert(title: Text("error"), message: Text("wrong_password"), dismissButton: .default(Text("ok")))
                 }
-                .navigationBarTitle("vault")
-                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("vault")
                 .onTapGesture {
                     #if os(iOS)
                     hideKeyboard()
                     #endif
                 }
-                .allowAutoDismiss {
-                    !isLoading
-                }
-                .animation(.none)
                 .onAppear {
                     checkBiometrics()
                 }

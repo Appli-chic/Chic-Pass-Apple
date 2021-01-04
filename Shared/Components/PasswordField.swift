@@ -39,7 +39,7 @@ struct PasswordField: View {
             }
         }
     }
-
+    
     private func getPasswordStrength() -> some View {
         if password.count < 6 {
             return Text("weak")
@@ -63,29 +63,29 @@ struct PasswordField: View {
                     .foregroundColor(Color(.systemGreen))
         }
     }
-
-    static func getGeneratedPasswordColor(password: String) -> Color {
-        if password.count < 20 {
-            return Color(.systemRed)
-        } else if password.count < 45 {
-            return Color(.systemOrange)
-        } else if password.count < 90 {
-            return Color(.systemGreen)
-        } else {
-            return Color(.systemGreen)
-        }
-    }
-
-    static func getGeneratedPasswordText(password: String) -> String {
-        if password.count < 20 {
-            return NSLocalizedString("weak", comment: "Password Strength")
-        } else if password.count < 45 {
-            return NSLocalizedString("medium", comment: "Password Strength")
-        } else if password.count < 90 {
-            return NSLocalizedString("strong", comment: "Password Strength")
-        } else {
-            return NSLocalizedString("very_strong", comment: "Password Strength")
-        }
-    }
 }
 #endif
+
+func getGeneratedPasswordColor(password: String) -> Color {
+    if password.count < 20 {
+        return Color(.systemRed)
+    } else if password.count < 45 {
+        return Color(.systemOrange)
+    } else if password.count < 90 {
+        return Color(.systemGreen)
+    } else {
+        return Color(.systemGreen)
+    }
+}
+
+func getGeneratedPasswordText(password: String) -> String {
+    if password.count < 20 {
+        return NSLocalizedString("weak", comment: "Password Strength")
+    } else if password.count < 45 {
+        return NSLocalizedString("medium", comment: "Password Strength")
+    } else if password.count < 90 {
+        return NSLocalizedString("strong", comment: "Password Strength")
+    } else {
+        return NSLocalizedString("very_strong", comment: "Password Strength")
+    }
+}

@@ -18,6 +18,33 @@ struct EntriesScreen: View {
     @State private var searchText: String = ""
 
     var body: some View {
+        #if os(iOS)
+        return displayContent()
+            .navigationBarTitleDisplayMode(.inline)
+            .actionSheet(isPresented: $isDeleteAlertOpen) {
+                ActionSheet(title: Text(entryToDelete!.name!), message: Text("are_you_sure_delete_entry"),
+                        buttons: [
+                            .destructive(Text("delete")) {
+                                deleteEntry()
+                            },
+                            .cancel()
+                        ]
+                )
+            }
+        #else
+        return displayContent()
+            .alert(isPresented: $isDeleteAlertOpen) {() -> Alert in
+                Alert(title: Text(entryToDelete!.name!), message: Text("are_you_sure_delete_entry"), primaryButton: .destructive(Text("delete")) {
+                    deleteEntry()
+                },
+                      secondaryButton: .cancel(Text("cancel")))
+                
+                
+            }
+        #endif
+    }
+    
+    private func displayContent() -> some View {
         SearchNavigation(text: $searchText, search: {}, cancel: {}) {
             VStack {
                 NavigationLink(destination: EntryDetail(vaultData: vaultData, entry: $currentEntry),
@@ -35,15 +62,15 @@ struct EntriesScreen: View {
                             }
                 }
             }
-                    .navigationBarTitle("passwords")
+                    .navigationTitle("passwords")
                     .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
+                        ToolbarItem(placement: .cancellationAction) {
                             Button(action: { mode.wrappedValue.dismiss() }) {
                                 Label("", systemImage: "chevron.backward")
                             }
                         }
 
-                        ToolbarItem(placement: .navigationBarTrailing) {
+                        ToolbarItem(placement: .confirmationAction) {
                             Button(action: { isAddingEntry.toggle() }) {
                                 Label("", systemImage: "plus")
                             }
@@ -53,16 +80,6 @@ struct EntriesScreen: View {
                         NavigationView {
                             NewEntryScreen(vaultData: vaultData)
                         }
-                    }
-                    .actionSheet(isPresented: $isDeleteAlertOpen) {
-                        ActionSheet(title: Text(entryToDelete!.name!), message: Text("are_you_sure_delete_entry"),
-                                buttons: [
-                                    .destructive(Text("delete")) {
-                                        deleteEntry()
-                                    },
-                                    .cancel()
-                                ]
-                        )
                     }
         }
     }

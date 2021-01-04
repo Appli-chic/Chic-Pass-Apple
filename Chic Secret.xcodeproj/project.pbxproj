@@ -43,6 +43,8 @@
 		86C8ACB69C2B935233861B8C /* Pods_Chic_Secret__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1632EC08444AF15934BF127D /* Pods_Chic_Secret__macOS_.framework */; };
 		A7810BE5259B4475002CCB53 /* VaultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7810BE4259B4475002CCB53 /* VaultItem.swift */; };
 		A7810BE6259B4475002CCB53 /* VaultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7810BE4259B4475002CCB53 /* VaultItem.swift */; };
+		A7F5BB4225A35492003A9148 /* crossplatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F5BB4125A35492003A9148 /* crossplatform.swift */; };
+		A7F5BB4325A35492003A9148 /* crossplatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F5BB4125A35492003A9148 /* crossplatform.swift */; };
 		BDDB909154ACFFE5EB2C0CCE /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB909AF57ADDC244E9C018 /* Security.swift */; };
 		BDDB90C69F9AF51569F87B9B /* MbModalHackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9EC8F1639E4FE2C32E7C /* MbModalHackView.swift */; };
 		BDDB9179A1689584197A89ED /* BiometryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9DFEC0F32CA7E0FD0762 /* BiometryScreen.swift */; };
@@ -74,9 +76,7 @@
 		BDDB97F5F1AF39388F3C267F /* EntryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB962EB8EB6E990F65C9AF /* EntryItem.swift */; };
 		BDDB9830E926CF033407EDE6 /* CategoryListInNewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9DC3635E8277AD8C50D0 /* CategoryListInNewEntry.swift */; };
 		BDDB983277AA7508D578789E /* CategoryListByVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB92BE18EB43BDB0A3BE24 /* CategoryListByVault.swift */; };
-		BDDB99985470529346082A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9D8E089CB0B8FA9A9177 /* AppDelegate.swift */; };
 		BDDB9AC1A38337CA7DC92467 /* CategoryListInNewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9DC3635E8277AD8C50D0 /* CategoryListInNewEntry.swift */; };
-		BDDB9AF0499049B5C51E87CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9D8E089CB0B8FA9A9177 /* AppDelegate.swift */; };
 		BDDB9AFEEA36B4AAB08C830C /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9EFBC977B7158A1F52F6 /* CategoryItem.swift */; };
 		BDDB9B3082E1AFFA16C186A5 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB909AF57ADDC244E9C018 /* Security.swift */; };
 		BDDB9B85C69378C1529BB08B /* BiometryCheckScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB93BA4D9EC9D42EC5CA4A /* BiometryCheckScreen.swift */; };
@@ -140,6 +140,7 @@
 		836D3D91F87656D9903190E5 /* EntrylistByVault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntrylistByVault.swift; sourceTree = "<group>"; };
 		836D3DAC6F55BE6F339200D1 /* TextFieldTyped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTyped.swift; sourceTree = "<group>"; };
 		A7810BE4259B4475002CCB53 /* VaultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultItem.swift; sourceTree = "<group>"; };
+		A7F5BB4125A35492003A9148 /* crossplatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crossplatform.swift; sourceTree = "<group>"; };
 		AF58C5249279A0CCE26D8533 /* Pods-Chic Secret (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chic Secret (macOS).release.xcconfig"; path = "Target Support Files/Pods-Chic Secret (macOS)/Pods-Chic Secret (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		BDDB909AF57ADDC244E9C018 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		BDDB9234B4BF2D38E6501D28 /* HealthScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthScreen.swift; sourceTree = "<group>"; };
@@ -153,7 +154,6 @@
 		BDDB9C4331F814968C9864FD /* NewCategoryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryScreen.swift; sourceTree = "<group>"; };
 		BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordUnlockScreen.swift; sourceTree = "<group>"; };
 		BDDB9D3FC36D1C4B9A6FFEC2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		BDDB9D8E089CB0B8FA9A9177 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDDB9DC3635E8277AD8C50D0 /* CategoryListInNewEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListInNewEntry.swift; sourceTree = "<group>"; };
 		BDDB9DFEC0F32CA7E0FD0762 /* BiometryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometryScreen.swift; sourceTree = "<group>"; };
 		BDDB9E4F2AD6BE723F5C16C9 /* SettingsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
@@ -224,7 +224,6 @@
 				836D35E9ABF878D37007DEB6 /* Screens */,
 				836D328C97688AD440E66989 /* Components */,
 				836D3B0A1AE262D2003A17BC /* Utils */,
-				BDDB9D8E089CB0B8FA9A9177 /* AppDelegate.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -324,6 +323,7 @@
 				BDDB909AF57ADDC244E9C018 /* Security.swift */,
 				BDDB9D3FC36D1C4B9A6FFEC2 /* Color.swift */,
 				BDDB9C064B44677C0B8D1CCC /* StringProtocol.swift */,
+				A7F5BB4125A35492003A9148 /* crossplatform.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -666,6 +666,7 @@
 				BDDB9282A753E7FEF73916D9 /* NewEntryScreen.swift in Sources */,
 				836D37D07C90505F96809949 /* EntryDetail.swift in Sources */,
 				836D300C826E46A3269C7DA6 /* GeneratePasswordScreen.swift in Sources */,
+				A7F5BB4225A35492003A9148 /* crossplatform.swift in Sources */,
 				836D3015A0B8219E27F3057B /* PasswordAttributed.swift in Sources */,
 				BDDB93D8DACF102A31D83704 /* EntryItem.swift in Sources */,
 				BDDB92197CB934BFD7A58A20 /* SettingsScreen.swift in Sources */,
@@ -676,7 +677,6 @@
 				BDDB9179A1689584197A89ED /* BiometryScreen.swift in Sources */,
 				BDDB9B85C69378C1529BB08B /* BiometryCheckScreen.swift in Sources */,
 				BDDB9AC1A38337CA7DC92467 /* CategoryListInNewEntry.swift in Sources */,
-				BDDB99985470529346082A91 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +709,7 @@
 				BDDB951FB938A57A8D84306B /* NewEntryScreen.swift in Sources */,
 				836D3639C34DD221674F3559 /* EntryDetail.swift in Sources */,
 				836D3015D787E8D7E987239D /* GeneratePasswordScreen.swift in Sources */,
+				A7F5BB4325A35492003A9148 /* crossplatform.swift in Sources */,
 				836D336194F84CCE4943CAE4 /* PasswordAttributed.swift in Sources */,
 				BDDB97F5F1AF39388F3C267F /* EntryItem.swift in Sources */,
 				BDDB9F1A44735FE78FFC194E /* SettingsScreen.swift in Sources */,
@@ -719,7 +720,6 @@
 				BDDB974E90EFC219357FBEE7 /* BiometryScreen.swift in Sources */,
 				BDDB976619D9F069989B2825 /* BiometryCheckScreen.swift in Sources */,
 				BDDB9830E926CF033407EDE6 /* CategoryListInNewEntry.swift in Sources */,
-				BDDB9AF0499049B5C51E87CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

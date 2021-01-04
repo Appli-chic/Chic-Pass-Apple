@@ -46,7 +46,7 @@ struct BiometryScreen: View {
                 }
             }
         }
-                .navigationBarTitle("biometry")
+                .navigationTitle("biometry")
                 .sheet(isPresented: $isShowingBiometryCheck) {
                     NavigationView<BiometryCheckScreen> {
                         BiometryCheckScreen(onPasswordChecked: onPasswordChecked)

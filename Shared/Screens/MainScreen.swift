@@ -46,7 +46,6 @@ struct MainScreen: View {
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
         }
-                .navigationBarTitle("")
-                .navigationBarHidden(true)
+                .navigationViewStyle(StackNavigationViewStyle())
     }
 }

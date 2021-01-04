@@ -20,37 +20,40 @@ struct EntriesScreen: View {
     var body: some View {
         #if os(iOS)
         return displayContent()
-            .navigationBarTitleDisplayMode(.inline)
-            .actionSheet(isPresented: $isDeleteAlertOpen) {
-                ActionSheet(title: Text(entryToDelete!.name!), message: Text("are_you_sure_delete_entry"),
-                        buttons: [
-                            .destructive(Text("delete")) {
-                                deleteEntry()
-                            },
-                            .cancel()
-                        ]
-                )
-            }
+                .navigationBarTitleDisplayMode(.inline)
+                .actionSheet(isPresented: $isDeleteAlertOpen) {
+                    ActionSheet(title: Text(entryToDelete!.name!), message: Text("are_you_sure_delete_entry"),
+                            buttons: [
+                                .destructive(Text("delete")) {
+                                    deleteEntry()
+                                },
+                                .cancel()
+                            ]
+                    )
+                }
         #else
         return displayContent()
-            .alert(isPresented: $isDeleteAlertOpen) {() -> Alert in
-                Alert(title: Text(entryToDelete!.name!), message: Text("are_you_sure_delete_entry"), primaryButton: .destructive(Text("delete")) {
-                    deleteEntry()
-                },
-                      secondaryButton: .cancel(Text("cancel")))
-                
-                
-            }
+                .frame(width: .infinity, height: .infinity)
+                .alert(isPresented: $isDeleteAlertOpen) { () -> Alert in
+                    Alert(title: Text(entryToDelete!.name!), message: Text("are_you_sure_delete_entry"), primaryButton: .destructive(Text("delete")) {
+                        deleteEntry()
+                    },
+                            secondaryButton: .cancel(Text("cancel")))
+
+
+                }
         #endif
     }
-    
+
     private func displayContent() -> some View {
         SearchNavigation(text: $searchText, search: {}, cancel: {}) {
             VStack {
+                #if os(iOS)
                 NavigationLink(destination: EntryDetail(vaultData: vaultData, entry: $currentEntry),
                         isActive: $isShowingEntryDetail) {
                     EmptyView()
                 }
+                #endif
 
                 EntryListByVault(filterValue: vaultData.vault!.id!.uuidString, search: searchText,
                         onDelete: askDeleteEntry) { (entry: Entry) in

@@ -24,15 +24,17 @@ struct NewVaultScreen: View {
     var body: some View {
         #if os(iOS)
         displayContent()
-            .navigationBarTitleDisplayMode(.inline)
-            .allowAutoDismiss {
-                !isLoading
-            }
+                .navigationBarTitleDisplayMode(.inline)
+                .allowAutoDismiss {
+                    !isLoading
+                }
         #else
         displayContent()
+                .frame(width: 300, height: 300)
+                .padding()
         #endif
     }
-    
+
     private func displayContent() -> some View {
         LoadingView(isShowing: $isLoading) {
             Form {

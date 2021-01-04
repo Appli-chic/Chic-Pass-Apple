@@ -20,31 +20,32 @@ struct CategoriesScreen: View {
     var body: some View {
         #if os(iOS)
         return displayContent()
-            .actionSheet(isPresented: $isDeleteAlertOpen) {
-                ActionSheet(title: Text(categoryToDelete!.name!), message: Text("are_you_sure_delete_category"),
-                        buttons: [
-                            .destructive(Text("delete")) {
-                                checkCanDeleteCategory()
-                            },
-                            .cancel()
-                        ]
-                )
-            }
+                .actionSheet(isPresented: $isDeleteAlertOpen) {
+                    ActionSheet(title: Text(categoryToDelete!.name!), message: Text("are_you_sure_delete_category"),
+                            buttons: [
+                                .destructive(Text("delete")) {
+                                    checkCanDeleteCategory()
+                                },
+                                .cancel()
+                            ]
+                    )
+                }
         #else
         return displayContent()
-            .alert(isPresented: $isDeleteAlertOpen) {() -> Alert in
-                Alert(title: Text(categoryToDelete!.name!), message: Text("are_you_sure_delete_category"), primaryButton: .destructive(Text("delete")) {
-                    checkCanDeleteCategory()
-                },
-                      secondaryButton: .cancel(Text("cancel")))
-                
-                
-            }
+                .frame(width: .infinity, height: .infinity)
+                .alert(isPresented: $isDeleteAlertOpen) { () -> Alert in
+                    Alert(title: Text(categoryToDelete!.name!), message: Text("are_you_sure_delete_category"), primaryButton: .destructive(Text("delete")) {
+                        checkCanDeleteCategory()
+                    },
+                            secondaryButton: .cancel(Text("cancel")))
+
+
+                }
         #endif
     }
-    
+
     private func displayContent() -> some View {
-        SearchNavigation(text: $searchText, search: {  }, cancel: {  }) {
+        SearchNavigation(text: $searchText, search: {}, cancel: {}) {
             CategoryListByVault(filterValue: vaultData.vault!.id!.uuidString, search: searchText,
                     onDelete: askDeleteCategory) { (category: Category) in
                 CategoryItem(category: category)

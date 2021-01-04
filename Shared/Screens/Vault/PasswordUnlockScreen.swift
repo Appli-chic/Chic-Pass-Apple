@@ -70,6 +70,8 @@ struct PasswordUnlockScreen: View {
             .animation(.none)
         #else
         displayContent()
+                .frame(width: 300, height: 300)
+                .padding()
         #endif
     }
     

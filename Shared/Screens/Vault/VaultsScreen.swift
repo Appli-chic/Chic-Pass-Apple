@@ -53,10 +53,13 @@ struct VaultsScreen: View {
 
             #if os(iOS)
             if UIDevice.current.userInterfaceIdiom == .pad {
-                NavigationLink(destination: MainScreen(),
-                        isActive: $vaultData.isMainScreenActive) {
-                    EmptyView()
+                if vaultData.isMainScreenActive{
+                    MainScreen()
                 }
+            }
+            #else
+            if vaultData.isMainScreenActive{
+                MainScreen()
             }
             #endif
         }
@@ -93,7 +96,7 @@ struct VaultsScreen: View {
                     }
                 }
                 .sheet(isPresented: $showingNewVaultScreen) {
-                    NavigationView<NewVaultScreen> {
+                    NavigationView {
                         NewVaultScreen()
                     }
                 }

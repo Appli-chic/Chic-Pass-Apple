@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Shared/Components/Lists/CategoryListInNewEntry.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Entry/NewEntryScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Entry/NewEntryScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/en.lproj/Localizable.strings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/fr.lproj/Localizable.strings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/applichic.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/applichic.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Components/VaultItem.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/VaultItem.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/MainScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/MainScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/PasswordUnlockScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/PasswordUnlockScreen.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_00008101-001C51412ED8001E" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -169,16 +167,5 @@
     <MESSAGE value="Adding search bar." />
     <MESSAGE value="Filtering categories." />
     <option name="LAST_COMMIT_MESSAGE" value="Filtering categories." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Shared/Components/Lists/EntrylistByVault.swift</url>
-          <line>33</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

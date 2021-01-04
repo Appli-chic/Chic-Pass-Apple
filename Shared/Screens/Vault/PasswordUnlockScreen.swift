@@ -80,7 +80,9 @@ struct PasswordUnlockScreen: View {
         }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: { mode.wrappedValue.dismiss() }) {
+                        Button(action: {
+                            mode.wrappedValue.dismiss()
+                        }) {
                             Text("cancel")
                         }
                                 .disabled(isLoading)

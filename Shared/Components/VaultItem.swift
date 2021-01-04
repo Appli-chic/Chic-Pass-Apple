@@ -15,12 +15,13 @@ struct VaultItem: View {
             Image(systemName: "lock.shield.fill")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 32.0)
+                    .frame(width: 25, height: 25)
+            
             Text(vault.name ?? vault.name!)
                     .font(.headline)
                     .padding(.leading)
             Spacer()
         }
-                .padding(.vertical, 16)
+                .padding(.vertical, 8)
     }
 }

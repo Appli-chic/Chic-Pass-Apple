@@ -5,18 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fbfe7c7-aead-4fbd-9dc7-51a4deb4bb38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Shared/AppDelegate.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/applichic.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/applichic.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Components/VaultItem.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Components/VaultItem.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/MainScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/MainScreen.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/PasswordUnlockScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/PasswordUnlockScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/Chic Secret.xcworkspace/xcuserdata/lazyos.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Chic_SecretApp.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Chic_SecretApp.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Entry/EntriesScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Entry/EntriesScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Screens/Vault/VaultsScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Screens/Vault/VaultsScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iOS/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/iOS/Info.plist" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_00008020-001649003A61002E" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -81,6 +85,7 @@
       <workItem from="1609349532204" duration="9828000" />
       <workItem from="1609399011104" duration="1606000" />
       <workItem from="1609405670042" duration="18397000" />
+      <workItem from="1609749281924" duration="6998000" />
     </task>
     <task id="LOCAL-00001" summary="Adding vault and security.">
       <created>1609237179479</created>

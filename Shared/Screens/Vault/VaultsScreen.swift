@@ -26,33 +26,27 @@ struct VaultsScreen: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            ZStack {
 
-                NavigationLink(destination: MainScreen(),
-                        isActive: $vaultData.isMainScreenActive) {
-                    EmptyView()
-                }
-
-                List {
-                    ForEach(vaults) { vault in
-                        VaultItem(vault: vault)
-                                .contentShape(Rectangle())
-                                .onTapGesture {
-                                    currentVault = vault
-                                    isShowingPasswordInput.toggle()
-                                }
-                                .sheet(isPresented: $isShowingPasswordInput) {
-                                    NavigationView<PasswordUnlockScreen> {
-                                        PasswordUnlockScreen(vault: $currentVault)
-                                    }
-                                }
+                if UIDevice.current.userInterfaceIdiom == .phone {
+                    NavigationLink(destination: MainScreen(),
+                            isActive: $vaultData.isMainScreenActive) {
+                        EmptyView()
                     }
-                            .onDelete(perform: askDeleteVault)
                 }
-                        .listStyle(InsetGroupedListStyle())
+
+                displayingVaults()
             }
                     .navigationBarTitle("vaults", displayMode: .large)
                     .toolbar {
+                        ToolbarItem(placement: .navigation) {
+                            #if os(macOS)
+                            Button(action: toggleSidebar, label: {
+                                Image(systemName: "sidebar.left")
+                            })
+                            #endif
+                        }
+
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button(action: { showingNewVaultScreen.toggle() }) {
                                 Label("Add vault", systemImage: "plus")
@@ -74,7 +68,41 @@ struct VaultsScreen: View {
                                 ]
                         )
                     }
+
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                NavigationLink(destination: MainScreen(),
+                        isActive: $vaultData.isMainScreenActive) {
+                    EmptyView()
+                }
+            }
         }
+    }
+
+    private func toggleSidebar() {
+        #if os(macOS)
+        NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+        #endif
+    }
+
+    private func displayingVaults() -> some View {
+        List {
+            ForEach(vaults) { vault in
+                VaultItem(vault: vault)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            currentVault = vault
+                            isShowingPasswordInput.toggle()
+                        }
+                        .sheet(isPresented: $isShowingPasswordInput) {
+                            NavigationView<PasswordUnlockScreen> {
+                                PasswordUnlockScreen(vault: $currentVault)
+                            }
+                        }
+            }
+                    .onDelete(perform: askDeleteVault)
+        }
+                .listStyle(InsetGroupedListStyle())
+//                        .listStyle(SidebarListStyle())
     }
 
     private func askDeleteVault(offsets: IndexSet) {

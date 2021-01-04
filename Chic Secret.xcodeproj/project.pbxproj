@@ -74,7 +74,9 @@
 		BDDB97F5F1AF39388F3C267F /* EntryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB962EB8EB6E990F65C9AF /* EntryItem.swift */; };
 		BDDB9830E926CF033407EDE6 /* CategoryListInNewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9DC3635E8277AD8C50D0 /* CategoryListInNewEntry.swift */; };
 		BDDB983277AA7508D578789E /* CategoryListByVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB92BE18EB43BDB0A3BE24 /* CategoryListByVault.swift */; };
+		BDDB99985470529346082A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9D8E089CB0B8FA9A9177 /* AppDelegate.swift */; };
 		BDDB9AC1A38337CA7DC92467 /* CategoryListInNewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9DC3635E8277AD8C50D0 /* CategoryListInNewEntry.swift */; };
+		BDDB9AF0499049B5C51E87CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9D8E089CB0B8FA9A9177 /* AppDelegate.swift */; };
 		BDDB9AFEEA36B4AAB08C830C /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB9EFBC977B7158A1F52F6 /* CategoryItem.swift */; };
 		BDDB9B3082E1AFFA16C186A5 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB909AF57ADDC244E9C018 /* Security.swift */; };
 		BDDB9B85C69378C1529BB08B /* BiometryCheckScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB93BA4D9EC9D42EC5CA4A /* BiometryCheckScreen.swift */; };
@@ -151,6 +153,7 @@
 		BDDB9C4331F814968C9864FD /* NewCategoryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryScreen.swift; sourceTree = "<group>"; };
 		BDDB9C83E3908B1E2D97B809 /* PasswordUnlockScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordUnlockScreen.swift; sourceTree = "<group>"; };
 		BDDB9D3FC36D1C4B9A6FFEC2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		BDDB9D8E089CB0B8FA9A9177 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDDB9DC3635E8277AD8C50D0 /* CategoryListInNewEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListInNewEntry.swift; sourceTree = "<group>"; };
 		BDDB9DFEC0F32CA7E0FD0762 /* BiometryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometryScreen.swift; sourceTree = "<group>"; };
 		BDDB9E4F2AD6BE723F5C16C9 /* SettingsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
@@ -221,6 +224,7 @@
 				836D35E9ABF878D37007DEB6 /* Screens */,
 				836D328C97688AD440E66989 /* Components */,
 				836D3B0A1AE262D2003A17BC /* Utils */,
+				BDDB9D8E089CB0B8FA9A9177 /* AppDelegate.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -672,6 +676,7 @@
 				BDDB9179A1689584197A89ED /* BiometryScreen.swift in Sources */,
 				BDDB9B85C69378C1529BB08B /* BiometryCheckScreen.swift in Sources */,
 				BDDB9AC1A38337CA7DC92467 /* CategoryListInNewEntry.swift in Sources */,
+				BDDB99985470529346082A91 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +719,7 @@
 				BDDB974E90EFC219357FBEE7 /* BiometryScreen.swift in Sources */,
 				BDDB976619D9F069989B2825 /* BiometryCheckScreen.swift in Sources */,
 				BDDB9830E926CF033407EDE6 /* CategoryListInNewEntry.swift in Sources */,
+				BDDB9AF0499049B5C51E87CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

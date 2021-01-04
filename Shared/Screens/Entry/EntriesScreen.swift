@@ -34,7 +34,6 @@ struct EntriesScreen: View {
                                 isShowingEntryDetail.toggle()
                             }
                 }
-                        .listStyle(PlainListStyle())
             }
                     .navigationBarTitle("passwords")
                     .toolbar {
